@@ -1,0 +1,1224 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Products"
+  description="RnJ Software LLC builds and operates its own software products. Meet Vanihla — the AI app that turns cooking videos into complete, structured recipes."
+>
+
+  <!-- =====================================================================
+       1. PAGE HERO
+       ===================================================================== -->
+  <section class="page-hero" aria-labelledby="products-hero-heading">
+    <!-- Blueprint grid background -->
+    <div class="page-hero-grid" aria-hidden="true"></div>
+    <!-- Scan line overlay -->
+    <div class="page-hero-scanline" aria-hidden="true"></div>
+
+    <div class="page-hero-inner">
+      <!-- Eyebrow -->
+      <p class="hero-eyebrow" aria-hidden="true">
+        <span class="eyebrow-bracket">[</span>
+        <span class="eyebrow-text">RNJ-SW // PRD-001</span>
+        <span class="eyebrow-bracket">]</span>
+      </p>
+
+      <h1 id="products-hero-heading" class="page-hero-heading">
+        Products
+      </h1>
+
+      <p class="page-hero-subhead">
+        Alongside our client work, RnJ Software builds and operates its own software products.
+      </p>
+    </div>
+
+    <!-- Decorative rule lines -->
+    <div class="hero-rule hero-rule--h" aria-hidden="true"></div>
+    <div class="hero-rule hero-rule--v" aria-hidden="true"></div>
+  </section>
+
+  <!-- =====================================================================
+       2. VANIHLA SHOWCASE
+       ===================================================================== -->
+  <section class="section vanihla-section" aria-labelledby="vanihla-heading">
+    <div class="section-inner">
+
+      <header class="section-header">
+        <p class="section-eyebrow" aria-hidden="true">
+          <span class="eyebrow-mono">// FEATURED PRODUCT</span>
+        </p>
+        <h2 id="vanihla-heading" class="section-heading">Vanihla</h2>
+        <p class="section-tagline">AI that turns cooking videos into recipes.</p>
+      </header>
+
+      <!-- Two-column showcase -->
+      <div class="vanihla-showcase">
+
+        <!-- Left: CSS Mockup Panel -->
+        <div class="mockup-panel" aria-hidden="true">
+          <!-- Blueprint corner marks -->
+          <div class="mockup-corner mockup-corner--tl"></div>
+          <div class="mockup-corner mockup-corner--tr"></div>
+          <div class="mockup-corner mockup-corner--bl"></div>
+          <div class="mockup-corner mockup-corner--br"></div>
+
+          <!-- Decorative scan lines -->
+          <div class="mockup-scanlines"></div>
+
+          <!-- Phone frame -->
+          <div class="phone-frame">
+            <div class="phone-notch"></div>
+            <div class="phone-screen">
+              <!-- App UI mockup -->
+              <div class="app-header">
+                <div class="app-logo-mark">V</div>
+                <span class="app-name">Vanihla</span>
+              </div>
+
+              <!-- Video thumbnail placeholder -->
+              <div class="video-thumb">
+                <div class="video-play-icon">
+                  <div class="play-triangle"></div>
+                </div>
+                <div class="video-label">Cooking video</div>
+                <!-- Animated processing bar -->
+                <div class="video-progress">
+                  <div class="video-progress-fill"></div>
+                </div>
+              </div>
+
+              <!-- AI processing indicator -->
+              <div class="ai-processing">
+                <span class="ai-dot ai-dot--1"></span>
+                <span class="ai-dot ai-dot--2"></span>
+                <span class="ai-dot ai-dot--3"></span>
+                <span class="ai-label">Extracting recipe…</span>
+              </div>
+
+              <!-- Recipe output card -->
+              <div class="recipe-card">
+                <div class="recipe-card-tag">RECIPE</div>
+                <div class="recipe-card-title"></div>
+                <div class="recipe-card-title recipe-card-title--short"></div>
+                <div class="recipe-divider"></div>
+                <div class="recipe-steps">
+                  <div class="recipe-step">
+                    <span class="step-dot"></span>
+                    <div class="step-line"></div>
+                  </div>
+                  <div class="recipe-step">
+                    <span class="step-dot"></span>
+                    <div class="step-line step-line--med"></div>
+                  </div>
+                  <div class="recipe-step">
+                    <span class="step-dot"></span>
+                    <div class="step-line step-line--short"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Panel annotations -->
+          <div class="panel-annotation panel-annotation--top">
+            <span class="annotation-tick"></span>
+            <span class="annotation-text">AI EXTRACTION</span>
+            <span class="annotation-tick"></span>
+          </div>
+          <div class="panel-annotation panel-annotation--bottom">
+            <span class="annotation-text">VANIHLA v1.0</span>
+          </div>
+        </div>
+
+        <!-- Right: Product Details -->
+        <div class="vanihla-content">
+          <!-- Description -->
+          <p class="vanihla-description">
+            Vanihla extracts complete, structured recipes from cooking videos using AI&nbsp;—
+            so what you watch becomes something you can actually cook.
+          </p>
+
+          <!-- Ownership — verbatim, prominent -->
+          <div class="ownership-block">
+            <div class="ownership-accent" aria-hidden="true"></div>
+            <p class="ownership-text">Vanihla is a product of RnJ Software LLC.</p>
+          </div>
+
+          <!-- Feature highlights -->
+          <ul class="feature-list" role="list">
+            <li class="feature-item" role="listitem">
+              <span class="feature-icon" aria-hidden="true">
+                <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+                  <path d="M3 8l3.5 3.5L13 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </span>
+              <span>Automatically identifies ingredients and quantities</span>
+            </li>
+            <li class="feature-item" role="listitem">
+              <span class="feature-icon" aria-hidden="true">
+                <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+                  <path d="M3 8l3.5 3.5L13 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </span>
+              <span>Outputs step-by-step instructions you can follow</span>
+            </li>
+            <li class="feature-item" role="listitem">
+              <span class="feature-icon" aria-hidden="true">
+                <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+                  <path d="M3 8l3.5 3.5L13 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </span>
+              <span>Works with videos from any cooking channel or source</span>
+            </li>
+          </ul>
+
+          <!-- CTA links -->
+          <div class="vanihla-ctas">
+            <a
+              href="https://vanihla.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn--primary"
+            >
+              Visit vanihla.com
+              <svg class="btn-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+
+            <!-- App Store affordance — inactive until live -->
+            <!-- Replace with the App Store URL once Vanihla is live -->
+            <div class="appstore-placeholder" aria-label="Coming to the App Store" role="img">
+              <svg class="appstore-icon" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+              </svg>
+              <div class="appstore-text">
+                <span class="appstore-sub">Coming to the</span>
+                <span class="appstore-main">App Store</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       3. CLOSING LINE
+       ===================================================================== -->
+  <section class="section closing-section" aria-labelledby="closing-heading">
+    <div class="section-inner closing-inner">
+      <div class="side-annotation" aria-hidden="true">
+        <span class="annotation-line"></span>
+        <span class="annotation-label">// PIPELINE</span>
+        <span class="annotation-line annotation-line--fade"></span>
+      </div>
+      <div class="closing-content">
+        <p class="section-eyebrow" aria-hidden="true">
+          <span class="eyebrow-mono">// WHAT'S NEXT</span>
+        </p>
+        <p class="closing-text" id="closing-heading">More products are in development.</p>
+        <p class="closing-sub">
+          We build software that solves problems we care about — and we ship it.
+          Follow our progress or <a href="/contact" class="inline-link">get in touch</a> to learn more.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       4. CONTACT CTA BAND
+       ===================================================================== -->
+  <section class="cta-band" aria-labelledby="products-cta-heading">
+    <div class="cta-scanline" aria-hidden="true"></div>
+
+    <div class="cta-inner">
+      <div class="cta-label-row" aria-hidden="true">
+        <span class="cta-ref">REF_PRD</span>
+        <div class="cta-rule"></div>
+        <span class="cta-ref">CONTACT</span>
+      </div>
+
+      <h2 id="products-cta-heading" class="cta-heading">
+        Work with us
+      </h2>
+      <p class="cta-body">
+        Interested in our products or our engineering services? Let's talk.
+      </p>
+      <a href="/contact" class="btn btn--inverse">
+        Get in touch
+        <svg class="btn-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+          <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style>
+  /* ==========================================================================
+     Shared utilities
+     ========================================================================== */
+
+  .section-eyebrow {
+    margin-bottom: 0.75rem;
+  }
+  .eyebrow-mono {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    font-weight: 500;
+    letter-spacing: var(--tracking-wide);
+    color: var(--color-signal);
+    text-transform: uppercase;
+  }
+
+  .section-heading {
+    font-family: var(--font-display);
+    font-size: var(--text-3xl);
+    font-weight: 700;
+    letter-spacing: var(--tracking-tight);
+    color: var(--color-ink-900);
+    line-height: var(--leading-tight);
+    margin: 0 0 0.75rem;
+  }
+
+  .section {
+    padding-block: var(--spacing-section-y);
+  }
+
+  .section-inner {
+    max-width: var(--container-site);
+    margin-inline: auto;
+    padding-inline: var(--spacing-gutter);
+  }
+
+  .section-header {
+    margin-bottom: 3.5rem;
+  }
+
+  /* Buttons */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--radius-sm);
+    font-family: var(--font-sans);
+    font-size: var(--text-sm);
+    font-weight: 600;
+    text-decoration: none;
+    letter-spacing: 0.01em;
+    transition: background-color 0.15s ease, color 0.15s ease,
+                box-shadow 0.15s ease, transform 0.15s ease;
+    white-space: nowrap;
+    cursor: pointer;
+  }
+  .btn:active { transform: translateY(1px); }
+  .btn:focus-visible {
+    outline: 2px solid var(--color-signal);
+    outline-offset: 3px;
+  }
+
+  .btn--primary {
+    background-color: var(--color-signal);
+    color: var(--color-surface-card);
+  }
+  .btn--primary:hover {
+    background-color: var(--color-signal-hover);
+    box-shadow: 0 4px 16px color-mix(in srgb, var(--color-signal) 30%, transparent);
+  }
+
+  .btn--inverse {
+    background-color: var(--color-paper);
+    color: var(--color-ink-900);
+  }
+  .btn--inverse:hover {
+    background-color: var(--color-gray-100);
+    box-shadow: 0 4px 20px rgb(0 0 0 / 0.25);
+  }
+
+  .btn-arrow {
+    flex-shrink: 0;
+    transition: transform 0.2s ease;
+  }
+  .btn:hover .btn-arrow {
+    transform: translateX(3px);
+  }
+
+  /* ==========================================================================
+     1. PAGE HERO
+     ========================================================================== */
+
+  .page-hero {
+    position: relative;
+    background-color: var(--color-ink-900);
+    overflow: hidden;
+    padding-block: 6rem 5rem;
+    isolation: isolate;
+  }
+
+  .page-hero-grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgb(255 255 255 / 0.035) 1px, transparent 1px),
+      linear-gradient(90deg, rgb(255 255 255 / 0.035) 1px, transparent 1px);
+    background-size: 48px 48px;
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%, transparent 90%);
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%, transparent 90%);
+    pointer-events: none;
+  }
+
+  .page-hero-scanline {
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 3px,
+      rgb(255 255 255 / 0.012) 3px,
+      rgb(255 255 255 / 0.012) 4px
+    );
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .hero-rule {
+    position: absolute;
+    background-color: rgb(255 255 255 / 0.06);
+    pointer-events: none;
+  }
+  .hero-rule--h {
+    left: 0; right: 0;
+    height: 1px;
+    top: 50%;
+  }
+  .hero-rule--v {
+    top: 0; bottom: 0;
+    width: 1px;
+    left: calc(var(--spacing-gutter) + 2px);
+  }
+
+  .page-hero-inner {
+    position: relative;
+    z-index: 2;
+    max-width: var(--container-site);
+    margin-inline: auto;
+    padding-inline: var(--spacing-gutter);
+  }
+
+  .hero-eyebrow {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    font-weight: 500;
+    letter-spacing: var(--tracking-wide);
+    color: var(--color-gray-500);
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.375rem;
+
+    opacity: 0;
+    transform: translateY(8px);
+    animation: fade-up 0.5s ease 0.05s forwards;
+  }
+
+  .eyebrow-bracket {
+    color: var(--color-signal);
+    font-size: 0.8rem;
+  }
+
+  .eyebrow-text {
+    letter-spacing: 0.1em;
+  }
+
+  .page-hero-heading {
+    font-family: var(--font-display);
+    font-size: var(--text-4xl);
+    font-weight: 700;
+    letter-spacing: var(--tracking-tight);
+    color: var(--color-paper);
+    line-height: var(--leading-tight);
+    margin: 0 0 1.5rem;
+
+    opacity: 0;
+    transform: translateY(16px);
+    animation: fade-up 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.15s forwards;
+  }
+
+  .page-hero-subhead {
+    font-family: var(--font-sans);
+    font-size: var(--text-lg);
+    color: var(--color-gray-400);
+    line-height: var(--leading-normal);
+    max-width: 42rem;
+    margin: 0;
+
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fade-up 0.55s ease 0.3s forwards;
+  }
+
+  @keyframes fade-up {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .hero-eyebrow,
+    .page-hero-heading,
+    .page-hero-subhead {
+      opacity: 1;
+      transform: none;
+      animation: none;
+    }
+  }
+
+  @media (max-width: 48rem) {
+    .page-hero {
+      padding-block: 4.5rem 3.5rem;
+    }
+  }
+
+  /* ==========================================================================
+     2. VANIHLA SHOWCASE
+     ========================================================================== */
+
+  .vanihla-section {
+    background-color: var(--color-paper-soft);
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .section-tagline {
+    font-family: var(--font-display);
+    font-size: var(--text-xl);
+    font-weight: 500;
+    color: var(--color-gray-600);
+    letter-spacing: var(--tracking-tight);
+    margin: 0;
+  }
+
+  /* Two-column layout */
+  .vanihla-showcase {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+  }
+
+  /* ----- Mockup Panel ----- */
+  .mockup-panel {
+    position: relative;
+    background-color: var(--color-ink-900);
+    border-radius: var(--radius-lg);
+    padding: 3rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 520px;
+    overflow: hidden;
+    isolation: isolate;
+  }
+
+  /* Blueprint corner marks */
+  .mockup-corner {
+    position: absolute;
+    width: 1.25rem;
+    height: 1.25rem;
+    pointer-events: none;
+    opacity: 0.6;
+  }
+  .mockup-corner--tl {
+    top: 0.875rem; left: 0.875rem;
+    border-top: 1.5px solid var(--color-signal);
+    border-left: 1.5px solid var(--color-signal);
+    border-radius: var(--radius-xs) 0 0 0;
+  }
+  .mockup-corner--tr {
+    top: 0.875rem; right: 0.875rem;
+    border-top: 1.5px solid var(--color-signal);
+    border-right: 1.5px solid var(--color-signal);
+    border-radius: 0 var(--radius-xs) 0 0;
+  }
+  .mockup-corner--bl {
+    bottom: 0.875rem; left: 0.875rem;
+    border-bottom: 1.5px solid var(--color-signal);
+    border-left: 1.5px solid var(--color-signal);
+    border-radius: 0 0 0 var(--radius-xs);
+  }
+  .mockup-corner--br {
+    bottom: 0.875rem; right: 0.875rem;
+    border-bottom: 1.5px solid var(--color-signal);
+    border-right: 1.5px solid var(--color-signal);
+    border-radius: 0 0 var(--radius-xs) 0;
+  }
+
+  /* Scanlines overlay */
+  .mockup-scanlines {
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 3px,
+      rgb(255 255 255 / 0.01) 3px,
+      rgb(255 255 255 / 0.01) 4px
+    );
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* Blueprint grid background for panel */
+  .mockup-panel::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgb(255 255 255 / 0.02) 1px, transparent 1px),
+      linear-gradient(90deg, rgb(255 255 255 / 0.02) 1px, transparent 1px);
+    background-size: 32px 32px;
+    pointer-events: none;
+  }
+
+  /* Radial glow */
+  .mockup-panel::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+      ellipse 70% 60% at 50% 50%,
+      color-mix(in srgb, var(--color-signal) 8%, transparent) 0%,
+      transparent 70%
+    );
+    pointer-events: none;
+  }
+
+  /* Panel annotations */
+  .panel-annotation {
+    position: absolute;
+    left: 0; right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-family: var(--font-mono);
+    font-size: 0.5rem;
+    letter-spacing: 0.12em;
+    color: var(--color-gray-700);
+    text-transform: uppercase;
+    pointer-events: none;
+    z-index: 2;
+  }
+  .panel-annotation--top { top: 0.875rem; }
+  .panel-annotation--bottom { bottom: 0.875rem; }
+
+  .annotation-tick {
+    display: inline-block;
+    width: 1.5rem;
+    height: 1px;
+    background-color: var(--color-gray-800);
+  }
+
+  /* ----- Phone Frame ----- */
+  .phone-frame {
+    position: relative;
+    z-index: 1;
+    width: 200px;
+    background-color: var(--color-ink-800);
+    border-radius: 2rem;
+    border: 1.5px solid var(--color-border-dark);
+    box-shadow:
+      0 0 0 1px rgb(255 255 255 / 0.04),
+      0 24px 64px rgb(0 0 0 / 0.5),
+      inset 0 1px 0 rgb(255 255 255 / 0.06);
+    overflow: hidden;
+    padding: 0.5rem;
+  }
+
+  .phone-notch {
+    width: 60px;
+    height: 10px;
+    background-color: var(--color-ink-950);
+    border-radius: 0 0 0.75rem 0.75rem;
+    margin: 0 auto 0.5rem;
+  }
+
+  .phone-screen {
+    background-color: var(--color-ink-950);
+    border-radius: 1.5rem;
+    padding: 0.875rem 0.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+    min-height: 360px;
+  }
+
+  /* App header */
+  .app-header {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .app-logo-mark {
+    width: 20px;
+    height: 20px;
+    background-color: var(--color-signal);
+    border-radius: var(--radius-xs);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-display);
+    font-size: 0.65rem;
+    font-weight: 700;
+    color: #fff;
+    flex-shrink: 0;
+  }
+
+  .app-name {
+    font-family: var(--font-display);
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: var(--color-paper);
+    letter-spacing: 0.01em;
+  }
+
+  /* Video thumbnail */
+  .video-thumb {
+    background-color: var(--color-ink-800);
+    border-radius: var(--radius-sm);
+    height: 80px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--color-border-dark);
+    overflow: hidden;
+  }
+
+  .video-play-icon {
+    width: 28px;
+    height: 28px;
+    background-color: color-mix(in srgb, var(--color-signal) 20%, transparent);
+    border: 1px solid color-mix(in srgb, var(--color-signal) 40%, transparent);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .play-triangle {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 4px 0 4px 7px;
+    border-color: transparent transparent transparent var(--color-signal);
+    margin-left: 2px;
+  }
+
+  .video-label {
+    position: absolute;
+    bottom: 0.375rem;
+    left: 0.5rem;
+    font-family: var(--font-mono);
+    font-size: 0.45rem;
+    letter-spacing: 0.08em;
+    color: var(--color-gray-500);
+    text-transform: uppercase;
+  }
+
+  .video-progress {
+    position: absolute;
+    bottom: 0;
+    left: 0; right: 0;
+    height: 2px;
+    background-color: var(--color-ink-700);
+  }
+
+  .video-progress-fill {
+    height: 100%;
+    width: 65%;
+    background-color: var(--color-signal);
+    border-radius: 1px;
+
+    animation: progress-pulse 2.5s ease-in-out infinite;
+  }
+
+  @keyframes progress-pulse {
+    0%, 100% { opacity: 0.6; }
+    50% { opacity: 1; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .video-progress-fill { animation: none; opacity: 0.8; }
+    .ai-dot { animation: none !important; opacity: 0.7; }
+  }
+
+  /* AI processing */
+  .ai-processing {
+    display: flex;
+    align-items: center;
+    gap: 0.375rem;
+    padding: 0.5rem 0.625rem;
+    background-color: color-mix(in srgb, var(--color-signal) 8%, transparent);
+    border: 1px solid color-mix(in srgb, var(--color-signal) 20%, transparent);
+    border-radius: var(--radius-xs);
+  }
+
+  .ai-dot {
+    display: inline-block;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: var(--color-signal);
+    flex-shrink: 0;
+  }
+
+  .ai-dot--1 { animation: dot-blink 1.2s ease-in-out 0s infinite; }
+  .ai-dot--2 { animation: dot-blink 1.2s ease-in-out 0.2s infinite; }
+  .ai-dot--3 { animation: dot-blink 1.2s ease-in-out 0.4s infinite; }
+
+  @keyframes dot-blink {
+    0%, 100% { opacity: 0.25; transform: scale(0.8); }
+    50% { opacity: 1; transform: scale(1.1); }
+  }
+
+  .ai-label {
+    font-family: var(--font-mono);
+    font-size: 0.5rem;
+    letter-spacing: 0.05em;
+    color: color-mix(in srgb, var(--color-signal) 80%, var(--color-paper));
+  }
+
+  /* Recipe output card */
+  .recipe-card {
+    background-color: var(--color-ink-800);
+    border-radius: var(--radius-sm);
+    padding: 0.75rem;
+    border: 1px solid var(--color-border-dark);
+    flex: 1;
+  }
+
+  .recipe-card-tag {
+    font-family: var(--font-mono);
+    font-size: 0.42rem;
+    letter-spacing: 0.12em;
+    color: var(--color-signal);
+    margin-bottom: 0.5rem;
+  }
+
+  .recipe-card-title {
+    height: 6px;
+    background-color: var(--color-gray-700);
+    border-radius: 3px;
+    margin-bottom: 0.3rem;
+    width: 80%;
+  }
+
+  .recipe-card-title--short {
+    width: 55%;
+  }
+
+  .recipe-divider {
+    height: 1px;
+    background-color: var(--color-border-dark);
+    margin: 0.625rem 0;
+  }
+
+  .recipe-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .recipe-step {
+    display: flex;
+    align-items: center;
+    gap: 0.375rem;
+  }
+
+  .step-dot {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: var(--color-signal);
+    flex-shrink: 0;
+    opacity: 0.8;
+  }
+
+  .step-line {
+    height: 5px;
+    background-color: var(--color-gray-700);
+    border-radius: 2.5px;
+    flex: 1;
+  }
+
+  .step-line--med {
+    flex: 0.75;
+  }
+
+  .step-line--short {
+    flex: 0.5;
+  }
+
+  /* ----- Product Details ----- */
+  .vanihla-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .vanihla-description {
+    font-family: var(--font-sans);
+    font-size: var(--text-lg);
+    color: var(--color-gray-600);
+    line-height: var(--leading-normal);
+    margin: 0;
+    max-width: var(--container-narrow);
+  }
+
+  /* Ownership block — prominent */
+  .ownership-block {
+    display: flex;
+    align-items: stretch;
+    gap: 1rem;
+    padding: 1.25rem 1.5rem;
+    background-color: color-mix(in srgb, var(--color-signal) 5%, var(--color-surface-card));
+    border: 1px solid color-mix(in srgb, var(--color-signal) 15%, var(--color-border));
+    border-radius: var(--radius-md);
+  }
+
+  .ownership-accent {
+    width: 3px;
+    border-radius: 2px;
+    background-color: var(--color-signal);
+    flex-shrink: 0;
+    align-self: stretch;
+  }
+
+  .ownership-text {
+    font-family: var(--font-sans);
+    font-size: var(--text-base);
+    font-weight: 600;
+    color: var(--color-ink-900);
+    line-height: var(--leading-normal);
+    margin: 0;
+  }
+
+  /* Feature list */
+  .feature-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .feature-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.625rem;
+    font-family: var(--font-sans);
+    font-size: var(--text-sm);
+    color: var(--color-gray-600);
+    line-height: var(--leading-normal);
+  }
+
+  .feature-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.25rem;
+    height: 1.25rem;
+    background-color: color-mix(in srgb, var(--color-signal) 12%, transparent);
+    color: var(--color-signal);
+    border-radius: var(--radius-xs);
+    flex-shrink: 0;
+    margin-top: 0.1rem;
+  }
+
+  /* CTA row */
+  .vanihla-ctas {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  /* App Store placeholder (inactive) */
+  .appstore-placeholder {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.625rem;
+    padding: 0.625rem 1rem;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--color-border);
+    background-color: var(--color-surface-card);
+    cursor: not-allowed;
+    opacity: 0.5;
+    user-select: none;
+  }
+
+  .appstore-icon {
+    color: var(--color-gray-600);
+    flex-shrink: 0;
+  }
+
+  .appstore-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+  }
+
+  .appstore-sub {
+    font-family: var(--font-sans);
+    font-size: 0.6rem;
+    color: var(--color-gray-600);
+    letter-spacing: 0.01em;
+  }
+
+  .appstore-main {
+    font-family: var(--font-display);
+    font-size: var(--text-sm);
+    font-weight: 600;
+    color: var(--color-ink-900);
+    letter-spacing: var(--tracking-tight);
+  }
+
+  /* Responsive: stack at tablet */
+  @media (max-width: 64rem) {
+    .vanihla-showcase {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+
+    .mockup-panel {
+      min-height: 400px;
+    }
+
+    .phone-frame {
+      width: 180px;
+    }
+  }
+
+  @media (max-width: 40rem) {
+    .mockup-panel {
+      padding: 2rem 1.5rem;
+      min-height: 360px;
+    }
+
+    .phone-frame {
+      width: 160px;
+    }
+
+    .phone-screen {
+      min-height: 300px;
+    }
+  }
+
+  /* ==========================================================================
+     3. CLOSING SECTION
+     ========================================================================== */
+
+  .closing-section {
+    background-color: var(--color-paper);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .closing-inner {
+    display: grid;
+    grid-template-columns: 3.5rem 1fr;
+    gap: 2rem;
+    align-items: start;
+  }
+
+  .side-annotation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    padding-top: 0.5rem;
+  }
+
+  .annotation-line {
+    display: block;
+    width: 1px;
+    height: 4rem;
+    background: linear-gradient(to bottom, transparent, var(--color-signal));
+  }
+
+  .annotation-line--fade {
+    background: linear-gradient(to bottom, var(--color-signal), transparent);
+    height: 100%;
+    min-height: 3rem;
+  }
+
+  .annotation-label {
+    font-family: var(--font-mono);
+    font-size: 0.55rem;
+    letter-spacing: 0.1em;
+    color: var(--color-signal);
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    transform: rotate(180deg);
+    white-space: nowrap;
+  }
+
+  .closing-content {
+    padding-top: 0.25rem;
+  }
+
+  .closing-text {
+    font-family: var(--font-display);
+    font-size: var(--text-2xl);
+    font-weight: 600;
+    letter-spacing: var(--tracking-tight);
+    color: var(--color-ink-900);
+    line-height: var(--leading-snug);
+    margin: 0 0 1rem;
+  }
+
+  .closing-sub {
+    font-family: var(--font-sans);
+    font-size: var(--text-base);
+    color: var(--color-gray-600);
+    line-height: var(--leading-normal);
+    margin: 0;
+    max-width: 38rem;
+  }
+
+  .inline-link {
+    color: var(--color-signal);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.15s ease;
+  }
+  .inline-link:hover {
+    color: var(--color-signal-hover);
+    text-decoration: underline;
+  }
+  .inline-link:focus-visible {
+    outline: 2px solid var(--color-signal);
+    outline-offset: 2px;
+    border-radius: var(--radius-xs);
+  }
+
+  @media (max-width: 40rem) {
+    .closing-inner {
+      grid-template-columns: 1fr;
+    }
+    .side-annotation {
+      display: none;
+    }
+  }
+
+  /* ==========================================================================
+     4. CTA BAND
+     ========================================================================== */
+
+  .cta-band {
+    position: relative;
+    background-color: var(--color-ink-950);
+    padding-block: 6rem;
+    overflow: hidden;
+    isolation: isolate;
+    text-align: center;
+  }
+
+  .cta-scanline {
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 3px,
+      rgb(255 255 255 / 0.008) 3px,
+      rgb(255 255 255 / 0.008) 4px
+    );
+    pointer-events: none;
+  }
+
+  .cta-band::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+      ellipse 60% 70% at 50% 50%,
+      color-mix(in srgb, var(--color-signal) 12%, transparent) 0%,
+      transparent 70%
+    );
+    pointer-events: none;
+  }
+
+  .cta-inner {
+    position: relative;
+    z-index: 1;
+    max-width: 40rem;
+    margin-inline: auto;
+    padding-inline: var(--spacing-gutter);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cta-label-row {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+    width: 100%;
+    max-width: 20rem;
+  }
+
+  .cta-ref {
+    font-family: var(--font-mono);
+    font-size: 0.55rem;
+    letter-spacing: 0.1em;
+    color: var(--color-gray-700);
+    text-transform: uppercase;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .cta-rule {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(
+      to right,
+      var(--color-border-dark),
+      var(--color-signal),
+      var(--color-border-dark)
+    );
+  }
+
+  .cta-heading {
+    font-family: var(--font-display);
+    font-size: var(--text-4xl);
+    font-weight: 700;
+    letter-spacing: var(--tracking-tight);
+    color: var(--color-paper);
+    line-height: var(--leading-tight);
+    margin-bottom: 1.25rem;
+  }
+
+  .cta-body {
+    font-family: var(--font-sans);
+    font-size: var(--text-base);
+    color: var(--color-gray-500);
+    line-height: var(--leading-normal);
+    margin-bottom: 2.5rem;
+  }
+
+  @media (max-width: 48rem) {
+    .cta-band { padding-block: 4.5rem; }
+  }
+</style>
