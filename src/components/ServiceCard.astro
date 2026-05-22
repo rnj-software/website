@@ -1,0 +1,165 @@
+---
+interface Props {
+  index: number;       // 1-based, used for the reference number
+  name: string;
+  description: string;
+  href?: string;       // optional deep-link (for Services page reuse)
+}
+
+const { index, name, description, href } = Astro.props;
+const refNum = String(index).padStart(2, '0');
+---
+
+<article class="service-card" data-ref={refNum}>
+  <!-- Reference number -->
+  <span class="card-ref" aria-hidden="true">[{refNum}]</span>
+
+  <!-- Accent bar (animated on hover via CSS) -->
+  <div class="card-accent-bar" aria-hidden="true"></div>
+
+  <!-- Content -->
+  <div class="card-body">
+    <h3 class="card-name">
+      {href ? <a href={href} class="card-name-link">{name}</a> : name}
+    </h3>
+    <p class="card-desc">{description}</p>
+  </div>
+
+  <!-- Corner tick mark (blueprint detail) -->
+  <span class="card-corner" aria-hidden="true"></span>
+</article>
+
+<style>
+  .service-card {
+    position: relative;
+    background-color: var(--color-surface-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: 1.75rem 1.5rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    transition: box-shadow 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+    cursor: default;
+
+    /* Stagger animation handled by parent via --card-index custom prop */
+    opacity: 0;
+    transform: translateY(16px);
+    animation: card-reveal 0.45s ease forwards;
+    animation-delay: var(--card-delay, 0ms);
+  }
+
+  @keyframes card-reveal {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Respect reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    .service-card {
+      opacity: 1;
+      transform: none;
+      animation: none;
+    }
+  }
+
+  .service-card:hover {
+    box-shadow: var(--shadow-md);
+    border-color: var(--color-signal);
+    transform: translateY(-2px);
+  }
+
+  /* Accent bar — left edge highlight */
+  .card-accent-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 100%;
+    background-color: var(--color-signal);
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.25s ease;
+    border-radius: var(--radius-md) 0 0 var(--radius-md);
+  }
+
+  .service-card:hover .card-accent-bar {
+    transform: scaleY(1);
+  }
+
+  /* Reference number */
+  .card-ref {
+    font-family: var(--font-mono);
+    font-size: 0.625rem;
+    font-weight: 500;
+    letter-spacing: var(--tracking-wide);
+    color: var(--color-signal);
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 1rem;
+    opacity: 0.85;
+  }
+
+  /* Card content */
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    flex: 1;
+  }
+
+  .card-name {
+    font-family: var(--font-display);
+    font-size: var(--text-xl);
+    font-weight: 600;
+    color: var(--color-ink-900);
+    letter-spacing: var(--tracking-tight);
+    line-height: var(--leading-snug);
+    margin: 0;
+  }
+
+  .card-name-link {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.15s ease;
+  }
+
+  .card-name-link:hover {
+    color: var(--color-signal);
+  }
+
+  .card-name-link:focus-visible {
+    outline: 2px solid var(--color-signal);
+    outline-offset: 2px;
+    border-radius: var(--radius-xs);
+  }
+
+  .card-desc {
+    font-family: var(--font-sans);
+    font-size: var(--text-sm);
+    color: var(--color-gray-600);
+    line-height: var(--leading-normal);
+    margin: 0;
+  }
+
+  /* Blueprint corner tick */
+  .card-corner {
+    position: absolute;
+    bottom: 0.75rem;
+    right: 0.75rem;
+    width: 10px;
+    height: 10px;
+    border-bottom: 1.5px solid var(--color-border);
+    border-right: 1.5px solid var(--color-border);
+    border-radius: 0 0 var(--radius-xs) 0;
+    transition: border-color 0.2s ease;
+  }
+
+  .service-card:hover .card-corner {
+    border-color: var(--color-signal);
+  }
+</style>

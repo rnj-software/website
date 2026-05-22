@@ -1,22 +1,904 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import ServiceCard from '../components/ServiceCard.astro';
+
+const services = [
+  {
+    name: 'Custom Software Development',
+    description: 'Web applications and backend systems built around your business.',
+  },
+  {
+    name: 'Mobile App Development',
+    description: 'Native and cross-platform apps for iOS and Android.',
+  },
+  {
+    name: 'AI & Machine Learning Integration',
+    description: 'Modern AI woven into products and workflows.',
+  },
+  {
+    name: 'Cloud Architecture & DevOps',
+    description: 'Scalable, secure infrastructure and automated delivery.',
+  },
+  {
+    name: 'Technical Consulting & Strategy',
+    description: 'Architecture reviews and engineering guidance for your team.',
+  },
+];
 ---
 
 <BaseLayout
-  title="Home"
-  description="RnJ Software LLC — Engineering software solutions with precision and purpose."
+  title="Software Engineering & Consulting"
+  description="RnJ Software LLC — A software engineering and consulting firm based in Coral Springs, Florida. We design, build, and ship custom software for businesses that need it done right."
 >
-  <section style="min-height: 60vh; display: flex; align-items: center; justify-content: center; padding: 4rem 1.5rem;">
-    <div style="text-align: center; max-width: 44rem;">
-      <p style="font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.08em; color: var(--color-signal); text-transform: uppercase; margin-bottom: 1rem;">
-        Coming Soon
+
+  <!-- =====================================================================
+       1. HERO
+       ===================================================================== -->
+  <section class="hero" aria-labelledby="hero-heading">
+    <!-- Blueprint grid background -->
+    <div class="hero-grid" aria-hidden="true"></div>
+
+    <!-- Scan line overlay -->
+    <div class="hero-scanline" aria-hidden="true"></div>
+
+    <div class="hero-inner">
+      <!-- Eyebrow label -->
+      <p class="hero-eyebrow" aria-hidden="true">
+        <span class="eyebrow-bracket">[</span>
+        <span class="eyebrow-text">RNJ-SW // EST. 2025</span>
+        <span class="eyebrow-bracket">]</span>
       </p>
-      <h1 style="font-family: var(--font-display); font-size: clamp(2.5rem, 1.6rem + 3.6vw, 3.75rem); font-weight: 700; letter-spacing: -0.02em; color: var(--color-ink-900); line-height: 1.1; margin-bottom: 1.5rem;">
-        RnJ Software LLC
+
+      <!-- H1 Wordmark -->
+      <h1 id="hero-heading" class="hero-heading">
+        <span class="hero-heading-line">RnJ</span>
+        <span class="hero-heading-line hero-heading-line--accent">Software</span>
       </h1>
-      <p style="font-family: var(--font-sans); font-size: 1.125rem; color: var(--color-gray-600); line-height: 1.6;">
-        Engineering software solutions with precision and purpose.
+
+      <!-- Subheadline -->
+      <p class="hero-subhead">
+        A software engineering and consulting firm<br class="hero-br" />
+        based in Coral Springs, Florida.
       </p>
+
+      <!-- Supporting line -->
+      <p class="hero-body">
+        We design, build, and ship custom software&nbsp;—
+        from mobile apps to cloud platforms&nbsp;— for businesses that need it done right.
+      </p>
+
+      <!-- CTA -->
+      <div class="hero-cta">
+        <a href="/contact" class="btn btn--primary">
+          Get in touch
+          <svg class="btn-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+        <a href="/services" class="btn btn--ghost">View our services</a>
+      </div>
+
+      <!-- Blueprint coordinates -->
+      <div class="hero-coords" aria-hidden="true">
+        <span class="coord-item">26.2707° N</span>
+        <span class="coord-sep">/</span>
+        <span class="coord-item">80.2706° W</span>
+        <span class="coord-sep">//</span>
+        <span class="coord-item">CRL-SPGS-FL</span>
+      </div>
+    </div>
+
+    <!-- Decorative rule lines -->
+    <div class="hero-rule hero-rule--h" aria-hidden="true"></div>
+    <div class="hero-rule hero-rule--v" aria-hidden="true"></div>
+  </section>
+
+  <!-- =====================================================================
+       2. SERVICES SUMMARY
+       ===================================================================== -->
+  <section class="section services-section" aria-labelledby="services-heading">
+    <div class="section-inner">
+      <!-- Section header -->
+      <header class="section-header">
+        <p class="section-eyebrow" aria-hidden="true">
+          <span class="eyebrow-mono">// CAPABILITIES</span>
+        </p>
+        <h2 id="services-heading" class="section-heading">What we do</h2>
+        <p class="section-subhead">
+          End-to-end engineering — from concept to production.
+        </p>
+      </header>
+
+      <!-- Cards grid -->
+      <div class="services-grid" role="list">
+        {services.map((svc, i) => (
+          <div role="listitem" style={`--card-delay: ${i * 80}ms`}>
+            <ServiceCard
+              index={i + 1}
+              name={svc.name}
+              description={svc.description}
+            />
+          </div>
+        ))}
+      </div>
+
+      <!-- CTA link -->
+      <div class="section-cta-row">
+        <a href="/services" class="text-link">
+          Explore our services
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </div>
     </div>
   </section>
+
+  <!-- =====================================================================
+       3. ABOUT TEASER
+       ===================================================================== -->
+  <section class="section about-section" aria-labelledby="about-heading">
+    <div class="section-inner about-inner">
+      <!-- Left: annotation column -->
+      <div class="about-annotation" aria-hidden="true">
+        <span class="annotation-line"></span>
+        <span class="annotation-label">// ABOUT</span>
+        <span class="annotation-line"></span>
+      </div>
+
+      <!-- Right: content -->
+      <div class="about-content">
+        <p class="section-eyebrow">
+          <span class="eyebrow-mono">// WHO WE ARE</span>
+        </p>
+        <h2 id="about-heading" class="section-heading">
+          Built by engineers,<br />for builders.
+        </h2>
+        <p class="about-body">
+          RnJ Software LLC is a software engineering and consulting firm founded in 2025.
+          We partner with businesses to build software that works&nbsp;— and we build
+          our own products, too.
+        </p>
+        <a href="/about" class="text-link">
+          About RnJ Software
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       4. PRODUCTS CALLOUT
+       ===================================================================== -->
+  <section class="section products-section" aria-labelledby="products-heading">
+    <div class="section-inner">
+      <div class="products-card">
+        <!-- Decorative background label -->
+        <span class="products-bg-label" aria-hidden="true">VANIHLA</span>
+
+        <div class="products-content">
+          <p class="section-eyebrow">
+            <span class="eyebrow-mono">// OUR PRODUCTS</span>
+          </p>
+          <h2 id="products-heading" class="section-heading products-heading">
+            We build our own<br />products, too.
+          </h2>
+          <p class="products-body">
+            We're the team behind <strong>Vanihla</strong>, an AI-powered app that turns
+            cooking videos into recipes.
+          </p>
+          <a href="/products" class="btn btn--primary btn--sm">
+            See our products
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
+
+        <!-- Blueprint corner decoration -->
+        <div class="products-corner-tl" aria-hidden="true"></div>
+        <div class="products-corner-br" aria-hidden="true"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       5. CONTACT CTA BAND
+       ===================================================================== -->
+  <section class="cta-band" aria-labelledby="cta-heading">
+    <!-- Scan effect -->
+    <div class="cta-scanline" aria-hidden="true"></div>
+
+    <div class="cta-inner">
+      <div class="cta-label-row" aria-hidden="true">
+        <span class="cta-ref">REF_002</span>
+        <div class="cta-rule"></div>
+        <span class="cta-ref">CONTACT</span>
+      </div>
+
+      <h2 id="cta-heading" class="cta-heading">
+        Ready to build<br />something?
+      </h2>
+      <p class="cta-body">
+        Let's talk about your project. We'll respond within one business day.
+      </p>
+      <a href="/contact" class="btn btn--inverse">
+        Contact us
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+          <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+    </div>
+  </section>
+
 </BaseLayout>
+
+<style>
+  /* ==========================================================================
+     Shared utilities
+     ========================================================================== */
+
+  /* Buttons */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--radius-sm);
+    font-family: var(--font-sans);
+    font-size: var(--text-sm);
+    font-weight: 600;
+    text-decoration: none;
+    letter-spacing: 0.01em;
+    transition: background-color 0.15s ease, color 0.15s ease,
+                box-shadow 0.15s ease, transform 0.15s ease;
+    white-space: nowrap;
+    cursor: pointer;
+  }
+
+  .btn:active {
+    transform: translateY(1px);
+  }
+
+  .btn:focus-visible {
+    outline: 2px solid var(--color-signal);
+    outline-offset: 3px;
+  }
+
+  .btn--primary {
+    background-color: var(--color-signal);
+    color: #ffffff;
+  }
+  .btn--primary:hover {
+    background-color: var(--color-signal-hover);
+    box-shadow: 0 4px 16px rgb(37 99 255 / 0.3);
+  }
+
+  .btn--ghost {
+    background-color: transparent;
+    color: var(--color-paper);
+    border: 1px solid rgb(255 255 255 / 0.2);
+  }
+  .btn--ghost:hover {
+    background-color: rgb(255 255 255 / 0.08);
+    border-color: rgb(255 255 255 / 0.35);
+  }
+
+  .btn--inverse {
+    background-color: var(--color-paper);
+    color: var(--color-ink-900);
+  }
+  .btn--inverse:hover {
+    background-color: var(--color-gray-100);
+    box-shadow: 0 4px 20px rgb(0 0 0 / 0.25);
+  }
+
+  .btn--sm {
+    padding: 0.5625rem 1.125rem;
+    font-size: var(--text-sm);
+  }
+
+  .btn-arrow {
+    flex-shrink: 0;
+    transition: transform 0.2s ease;
+  }
+  .btn:hover .btn-arrow {
+    transform: translateX(3px);
+  }
+
+  /* Text links */
+  .text-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    font-family: var(--font-sans);
+    font-size: var(--text-sm);
+    font-weight: 600;
+    color: var(--color-signal);
+    text-decoration: none;
+    letter-spacing: 0.01em;
+    transition: gap 0.2s ease, color 0.15s ease;
+  }
+  .text-link:hover {
+    color: var(--color-signal-hover);
+    gap: 0.5rem;
+  }
+  .text-link:focus-visible {
+    outline: 2px solid var(--color-signal);
+    outline-offset: 2px;
+    border-radius: var(--radius-xs);
+  }
+
+  /* Eyebrow labels */
+  .section-eyebrow {
+    margin-bottom: 0.75rem;
+  }
+  .eyebrow-mono {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    font-weight: 500;
+    letter-spacing: var(--tracking-wide);
+    color: var(--color-signal);
+    text-transform: uppercase;
+  }
+
+  /* Section headings */
+  .section-heading {
+    font-family: var(--font-display);
+    font-size: var(--text-3xl);
+    font-weight: 700;
+    letter-spacing: var(--tracking-tight);
+    color: var(--color-ink-900);
+    line-height: var(--leading-tight);
+    margin: 0 0 1rem;
+  }
+
+  .section-subhead {
+    font-family: var(--font-sans);
+    font-size: var(--text-lg);
+    color: var(--color-gray-600);
+    line-height: var(--leading-normal);
+    margin: 0;
+  }
+
+  /* Generic section wrapper */
+  .section {
+    padding-block: var(--spacing-section-y);
+  }
+
+  .section-inner {
+    max-width: var(--container-site);
+    margin-inline: auto;
+    padding-inline: var(--spacing-gutter);
+  }
+
+  .section-header {
+    margin-bottom: 3rem;
+  }
+
+  .section-cta-row {
+    margin-top: 2.5rem;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  /* ==========================================================================
+     1. HERO
+     ========================================================================== */
+
+  .hero {
+    position: relative;
+    background-color: var(--color-ink-900);
+    overflow: hidden;
+    padding-block: 7rem 6rem;
+    isolation: isolate;
+  }
+
+  /* Blueprint grid */
+  .hero-grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgb(255 255 255 / 0.035) 1px, transparent 1px),
+      linear-gradient(90deg, rgb(255 255 255 / 0.035) 1px, transparent 1px);
+    background-size: 48px 48px;
+    /* Fade out toward the bottom */
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%, transparent 90%);
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%, transparent 90%);
+    pointer-events: none;
+  }
+
+  /* Scan line */
+  .hero-scanline {
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 3px,
+      rgb(255 255 255 / 0.012) 3px,
+      rgb(255 255 255 / 0.012) 4px
+    );
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  /* Decorative rule lines (blueprint cross-hairs) */
+  .hero-rule {
+    position: absolute;
+    background-color: rgb(255 255 255 / 0.06);
+    pointer-events: none;
+  }
+
+  .hero-rule--h {
+    left: 0;
+    right: 0;
+    height: 1px;
+    top: 50%;
+  }
+
+  .hero-rule--v {
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    left: calc(var(--spacing-gutter) + 2px);
+  }
+
+  .hero-inner {
+    position: relative;
+    z-index: 2;
+    max-width: var(--container-site);
+    margin-inline: auto;
+    padding-inline: var(--spacing-gutter);
+  }
+
+  /* Eyebrow */
+  .hero-eyebrow {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    font-weight: 500;
+    letter-spacing: var(--tracking-wide);
+    color: var(--color-gray-500);
+    margin-bottom: 1.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.375rem;
+
+    opacity: 0;
+    transform: translateY(8px);
+    animation: fade-up 0.5s ease 0.05s forwards;
+  }
+
+  .eyebrow-bracket {
+    color: var(--color-signal);
+    font-size: 0.8rem;
+  }
+
+  .eyebrow-text {
+    letter-spacing: 0.1em;
+  }
+
+  /* Heading */
+  .hero-heading {
+    font-family: var(--font-display);
+    font-size: var(--text-5xl);
+    font-weight: 700;
+    letter-spacing: var(--tracking-tight);
+    color: var(--color-paper);
+    line-height: 1;
+    margin: 0 0 1.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .hero-heading-line {
+    display: block;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fade-up 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  }
+
+  .hero-heading-line:nth-child(1) { animation-delay: 0.15s; }
+  .hero-heading-line:nth-child(2) { animation-delay: 0.28s; }
+
+  .hero-heading-line--accent {
+    color: var(--color-signal);
+  }
+
+  /* Subhead */
+  .hero-subhead {
+    font-family: var(--font-sans);
+    font-size: var(--text-xl);
+    font-weight: 500;
+    color: var(--color-gray-300);
+    line-height: var(--leading-snug);
+    margin-bottom: 1rem;
+    max-width: 44rem;
+
+    opacity: 0;
+    transform: translateY(12px);
+    animation: fade-up 0.55s ease 0.38s forwards;
+  }
+
+  .hero-br {
+    display: block;
+  }
+
+  /* Supporting body */
+  .hero-body {
+    font-family: var(--font-sans);
+    font-size: var(--text-base);
+    color: var(--color-gray-500);
+    line-height: var(--leading-normal);
+    max-width: 38rem;
+    margin-bottom: 2.5rem;
+
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fade-up 0.5s ease 0.5s forwards;
+  }
+
+  /* CTA group */
+  .hero-cta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    align-items: center;
+    margin-bottom: 3rem;
+
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fade-up 0.5s ease 0.6s forwards;
+  }
+
+  /* Coordinates */
+  .hero-coords {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--font-mono);
+    font-size: 0.6rem;
+    letter-spacing: 0.08em;
+    color: var(--color-gray-700);
+
+    opacity: 0;
+    animation: fade-up 0.5s ease 0.75s forwards;
+  }
+
+  .coord-sep {
+    color: var(--color-gray-800);
+  }
+
+  /* Stagger animation keyframes */
+  @keyframes fade-up {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .hero-eyebrow,
+    .hero-heading-line,
+    .hero-subhead,
+    .hero-body,
+    .hero-cta,
+    .hero-coords {
+      opacity: 1;
+      transform: none;
+      animation: none;
+    }
+  }
+
+  /* Hero responsive */
+  @media (max-width: 48rem) {
+    .hero {
+      padding-block: 5rem 4rem;
+    }
+    .hero-br { display: none; }
+    .hero-coords { display: none; }
+  }
+
+  /* ==========================================================================
+     2. SERVICES
+     ========================================================================== */
+
+  .services-section {
+    background-color: var(--color-paper-soft);
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+  }
+
+  @media (max-width: 64rem) {
+    .services-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 40rem) {
+    .services-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  /* ==========================================================================
+     3. ABOUT TEASER
+     ========================================================================== */
+
+  .about-section {
+    background-color: var(--color-paper);
+  }
+
+  .about-inner {
+    display: grid;
+    grid-template-columns: 3.5rem 1fr;
+    gap: 2rem;
+    align-items: start;
+  }
+
+  /* Left annotation column */
+  .about-annotation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    padding-top: 0.5rem;
+  }
+
+  .annotation-line {
+    display: block;
+    width: 1px;
+    height: 4rem;
+    background: linear-gradient(to bottom, transparent, var(--color-signal));
+  }
+
+  .annotation-line:last-child {
+    background: linear-gradient(to bottom, var(--color-signal), transparent);
+    height: 100%;
+    min-height: 3rem;
+  }
+
+  .annotation-label {
+    font-family: var(--font-mono);
+    font-size: 0.55rem;
+    letter-spacing: 0.1em;
+    color: var(--color-signal);
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    transform: rotate(180deg);
+    white-space: nowrap;
+  }
+
+  .about-body {
+    font-family: var(--font-sans);
+    font-size: var(--text-lg);
+    color: var(--color-gray-600);
+    line-height: var(--leading-normal);
+    margin-bottom: 1.5rem;
+    max-width: var(--container-narrow);
+  }
+
+  @media (max-width: 40rem) {
+    .about-inner {
+      grid-template-columns: 1fr;
+    }
+    .about-annotation {
+      display: none;
+    }
+  }
+
+  /* ==========================================================================
+     4. PRODUCTS CALLOUT
+     ========================================================================== */
+
+  .products-section {
+    background-color: var(--color-paper-soft);
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .products-card {
+    position: relative;
+    background-color: var(--color-ink-900);
+    border-radius: var(--radius-lg);
+    padding: 3.5rem 3rem;
+    overflow: hidden;
+    isolation: isolate;
+  }
+
+  /* Large background watermark */
+  .products-bg-label {
+    position: absolute;
+    right: -0.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: var(--font-display);
+    font-size: clamp(5rem, 12vw, 9rem);
+    font-weight: 700;
+    letter-spacing: -0.04em;
+    color: rgb(255 255 255 / 0.035);
+    pointer-events: none;
+    user-select: none;
+    line-height: 1;
+    white-space: nowrap;
+  }
+
+  .products-content {
+    position: relative;
+    z-index: 1;
+    max-width: 36rem;
+  }
+
+  .products-content .section-eyebrow .eyebrow-mono {
+    color: var(--color-signal-soft);
+    opacity: 0.7;
+  }
+
+  .products-heading {
+    color: var(--color-paper);
+  }
+
+  .products-body {
+    font-family: var(--font-sans);
+    font-size: var(--text-lg);
+    color: var(--color-gray-400);
+    line-height: var(--leading-normal);
+    margin-bottom: 2rem;
+  }
+
+  .products-body strong {
+    color: var(--color-paper);
+    font-weight: 600;
+  }
+
+  /* Blueprint corner marks */
+  .products-corner-tl,
+  .products-corner-br {
+    position: absolute;
+    width: 1.5rem;
+    height: 1.5rem;
+    pointer-events: none;
+  }
+
+  .products-corner-tl {
+    top: 1rem;
+    left: 1rem;
+    border-top: 1.5px solid var(--color-signal);
+    border-left: 1.5px solid var(--color-signal);
+    border-radius: var(--radius-xs) 0 0 0;
+    opacity: 0.5;
+  }
+
+  .products-corner-br {
+    bottom: 1rem;
+    right: 1rem;
+    border-bottom: 1.5px solid var(--color-signal);
+    border-right: 1.5px solid var(--color-signal);
+    border-radius: 0 0 var(--radius-xs) 0;
+    opacity: 0.5;
+  }
+
+  @media (max-width: 48rem) {
+    .products-card {
+      padding: 2.5rem 1.75rem;
+    }
+    .products-bg-label {
+      display: none;
+    }
+  }
+
+  /* ==========================================================================
+     5. CONTACT CTA BAND
+     ========================================================================== */
+
+  .cta-band {
+    position: relative;
+    background-color: var(--color-ink-950);
+    padding-block: 6rem;
+    overflow: hidden;
+    isolation: isolate;
+    text-align: center;
+  }
+
+  /* Animated scan line sweep */
+  .cta-scanline {
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 3px,
+      rgb(255 255 255 / 0.008) 3px,
+      rgb(255 255 255 / 0.008) 4px
+    );
+    pointer-events: none;
+  }
+
+  /* Radial glow behind the text */
+  .cta-band::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+      ellipse 60% 70% at 50% 50%,
+      rgb(37 99 255 / 0.12) 0%,
+      transparent 70%
+    );
+    pointer-events: none;
+  }
+
+  .cta-inner {
+    position: relative;
+    z-index: 1;
+    max-width: 40rem;
+    margin-inline: auto;
+    padding-inline: var(--spacing-gutter);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+  }
+
+  /* Reference row */
+  .cta-label-row {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+    width: 100%;
+    max-width: 20rem;
+  }
+
+  .cta-ref {
+    font-family: var(--font-mono);
+    font-size: 0.55rem;
+    letter-spacing: 0.1em;
+    color: var(--color-gray-700);
+    text-transform: uppercase;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .cta-rule {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(
+      to right,
+      var(--color-border-dark),
+      var(--color-signal),
+      var(--color-border-dark)
+    );
+  }
+
+  /* CTA heading */
+  .cta-heading {
+    font-family: var(--font-display);
+    font-size: var(--text-4xl);
+    font-weight: 700;
+    letter-spacing: var(--tracking-tight);
+    color: var(--color-paper);
+    line-height: var(--leading-tight);
+    margin-bottom: 1.25rem;
+  }
+
+  .cta-body {
+    font-family: var(--font-sans);
+    font-size: var(--text-base);
+    color: var(--color-gray-500);
+    line-height: var(--leading-normal);
+    margin-bottom: 2.5rem;
+  }
+
+  @media (max-width: 48rem) {
+    .cta-band { padding-block: 4.5rem; }
+  }
+</style>
