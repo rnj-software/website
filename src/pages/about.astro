@@ -54,7 +54,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
       <!-- Content -->
       <div class="approach-content">
-        <p class="section-eyebrow">
+        <p class="section-eyebrow" aria-hidden="true">
           <span class="eyebrow-mono">// HOW WE WORK</span>
         </p>
         <h2 id="approach-heading" class="section-heading">
@@ -75,7 +75,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   <section class="section values-section" aria-labelledby="values-heading">
     <div class="section-inner">
       <header class="section-header">
-        <p class="section-eyebrow">
+        <p class="section-eyebrow" aria-hidden="true">
           <span class="eyebrow-mono">// VALUES</span>
         </p>
         <h2 id="values-heading" class="section-heading">What we stand for</h2>
@@ -84,31 +84,31 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <div class="values-grid" role="list">
 
         <!-- Value 1 -->
-        <article class="value-card" role="listitem">
+        <div class="value-card" role="listitem">
           <div class="value-card-index" aria-hidden="true">01</div>
           <div class="value-card-corner value-card-corner--tl" aria-hidden="true"></div>
           <div class="value-card-corner value-card-corner--br" aria-hidden="true"></div>
           <h3 class="value-card-title">Engineering rigor</h3>
           <p class="value-card-body">We build software to last.</p>
-        </article>
+        </div>
 
         <!-- Value 2 -->
-        <article class="value-card" role="listitem">
+        <div class="value-card" role="listitem">
           <div class="value-card-index" aria-hidden="true">02</div>
           <div class="value-card-corner value-card-corner--tl" aria-hidden="true"></div>
           <div class="value-card-corner value-card-corner--br" aria-hidden="true"></div>
           <h3 class="value-card-title">End-to-end ownership</h3>
           <p class="value-card-body">From architecture to deployment.</p>
-        </article>
+        </div>
 
         <!-- Value 3 -->
-        <article class="value-card" role="listitem">
+        <div class="value-card" role="listitem">
           <div class="value-card-index" aria-hidden="true">03</div>
           <div class="value-card-corner value-card-corner--tl" aria-hidden="true"></div>
           <div class="value-card-corner value-card-corner--br" aria-hidden="true"></div>
           <h3 class="value-card-title">Practical delivery</h3>
           <p class="value-card-body">Working software, shipped.</p>
-        </article>
+        </div>
 
       </div>
     </div>
@@ -128,7 +128,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <div class="facts-corner facts-corner--br" aria-hidden="true"></div>
 
         <div class="facts-content">
-          <p class="section-eyebrow">
+          <p class="section-eyebrow" aria-hidden="true">
             <span class="eyebrow-mono facts-eyebrow-mono">// COMPANY INFO</span>
           </p>
           <h2 id="facts-heading" class="section-heading facts-heading">
@@ -179,7 +179,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       </p>
       <a href="/contact" class="btn btn--inverse">
         Contact us
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+        <svg class="btn-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
           <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
       </a>
@@ -262,6 +262,14 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   .btn--inverse:hover {
     background-color: var(--color-gray-100);
     box-shadow: 0 4px 20px rgb(0 0 0 / 0.25);
+  }
+
+  .btn-arrow {
+    flex-shrink: 0;
+    transition: transform 0.2s ease;
+  }
+  .btn:hover .btn-arrow {
+    transform: translateX(3px);
   }
 
   /* ==========================================================================
