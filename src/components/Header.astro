@@ -106,14 +106,41 @@ function isActive(href: string): boolean {
       }
     });
 
-    // Close on Escape
+    // Close on Escape; focus-trap Tab/Shift+Tab while menu is open
     document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && toggle.getAttribute('aria-expanded') === 'true') {
+      const isOpen = toggle.getAttribute('aria-expanded') === 'true';
+
+      if (e.key === 'Escape' && isOpen) {
         toggle.setAttribute('aria-expanded', 'false');
         toggle.setAttribute('aria-label', 'Open navigation menu');
         toggle.classList.remove('is-open');
         menu.hidden = true;
         toggle.focus();
+        return;
+      }
+
+      if (e.key === 'Tab' && isOpen) {
+        // Focusable elements within the menu: toggle button + all nav links
+        const focusable: HTMLElement[] = [
+          toggle,
+          ...Array.from(menu.querySelectorAll<HTMLAnchorElement>('a')),
+        ];
+        const first = focusable[0];
+        const last = focusable[focusable.length - 1];
+
+        if (e.shiftKey) {
+          // Shift+Tab: if focus is on the first element, wrap to last
+          if (document.activeElement === first) {
+            e.preventDefault();
+            last.focus();
+          }
+        } else {
+          // Tab: if focus is on the last element, wrap to first
+          if (document.activeElement === last) {
+            e.preventDefault();
+            first.focus();
+          }
+        }
       }
     });
 
@@ -184,7 +211,7 @@ function isActive(href: string): boolean {
     height: 28px;
     width: auto;
     /* Invert the B&W logo so it renders white on dark header */
-    filter: invert(1) brightness(1);
+    filter: invert(1);
     display: block;
   }
 
