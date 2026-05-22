@@ -1,0 +1,724 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ServiceCard from '../components/ServiceCard.astro';
+
+const services = [
+  {
+    name: 'Custom Software Development',
+    description:
+      'We build web applications and backend systems tailored to your business — from initial architecture through deployment and ongoing maintenance.',
+  },
+  {
+    name: 'Mobile App Development (iOS & Android)',
+    description:
+      'Native and cross-platform mobile apps designed for performance and a polished experience on both iOS and Android.',
+  },
+  {
+    name: 'AI & Machine Learning Integration',
+    description:
+      'We integrate modern AI and machine learning into products and workflows — from large language models to custom data pipelines.',
+  },
+  {
+    name: 'Cloud Architecture & DevOps',
+    description:
+      'Scalable, secure cloud infrastructure and automated deployment pipelines built on modern cloud platforms.',
+  },
+  {
+    name: 'Technical Consulting & Strategy',
+    description:
+      'Architecture reviews, technology strategy, and hands-on guidance to help your team make sound engineering decisions.',
+  },
+];
+---
+
+<BaseLayout
+  title="Services"
+  description="RnJ Software LLC offers custom software development, mobile app development, AI integration, cloud architecture, and technical consulting — end-to-end engineering for businesses that need it done right."
+>
+
+  <!-- =====================================================================
+       1. PAGE HERO
+       ===================================================================== -->
+  <section class="page-hero" aria-labelledby="services-hero-heading">
+    <!-- Blueprint grid background -->
+    <div class="page-hero-grid" aria-hidden="true"></div>
+    <!-- Scan line overlay -->
+    <div class="page-hero-scanline" aria-hidden="true"></div>
+
+    <div class="page-hero-inner">
+      <!-- Eyebrow -->
+      <p class="hero-eyebrow" aria-hidden="true">
+        <span class="eyebrow-bracket">[</span>
+        <span class="eyebrow-text">RNJ-SW // SVC-001</span>
+        <span class="eyebrow-bracket">]</span>
+      </p>
+
+      <h1 id="services-hero-heading" class="page-hero-heading">
+        Services
+      </h1>
+
+      <p class="page-hero-subhead">
+        End-to-end engineering — from initial architecture to production and beyond.
+        We partner with businesses to build software that works.
+      </p>
+    </div>
+
+    <!-- Decorative rule lines -->
+    <div class="hero-rule hero-rule--h" aria-hidden="true"></div>
+    <div class="hero-rule hero-rule--v" aria-hidden="true"></div>
+  </section>
+
+  <!-- =====================================================================
+       2. SERVICES GRID
+       ===================================================================== -->
+  <section class="section services-section" aria-labelledby="services-list-heading">
+    <div class="section-inner">
+      <header class="section-header">
+        <p class="section-eyebrow" aria-hidden="true">
+          <span class="eyebrow-mono">// CAPABILITIES</span>
+        </p>
+        <h2 id="services-list-heading" class="section-heading">What we do</h2>
+        <p class="section-subhead">
+          Five core disciplines. One engineering team that owns the full stack.
+        </p>
+      </header>
+
+      <!-- Cards grid -->
+      <div class="services-grid" role="list">
+        {services.map((svc, i) => (
+          <div role="listitem" style={`--card-delay: ${i * 90}ms`}>
+            <ServiceCard
+              index={i + 1}
+              name={svc.name}
+              description={svc.description}
+            />
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       3. PROCESS STRIP
+       ===================================================================== -->
+  <section class="section process-section" aria-labelledby="process-heading">
+    <div class="section-inner">
+      <!-- Side annotation -->
+      <div class="section-annotated">
+        <div class="side-annotation" aria-hidden="true">
+          <span class="annotation-line"></span>
+          <span class="annotation-label">// PROCESS</span>
+          <span class="annotation-line annotation-line--fade"></span>
+        </div>
+
+        <div class="process-content">
+          <p class="section-eyebrow" aria-hidden="true">
+            <span class="eyebrow-mono">// HOW WE WORK</span>
+          </p>
+          <h2 id="process-heading" class="section-heading">
+            From brief to&nbsp;production
+          </h2>
+          <p class="process-body">
+            Whether you need a greenfield build, a major feature, or an expert second opinion
+            on your architecture — we work closely with your team from day one. No handoffs to
+            junior developers, no black-box delivery. Senior engineers, direct communication,
+            and software that ships.
+          </p>
+        </div>
+      </div>
+
+      <!-- Step track -->
+      <ol class="process-steps" aria-label="Our process steps">
+        <li class="process-step">
+          <span class="step-num" aria-hidden="true">01</span>
+          <div class="step-body">
+            <h3 class="step-title">Discovery</h3>
+            <p class="step-desc">We understand your problem, constraints, and goals before touching code.</p>
+          </div>
+        </li>
+        <li class="process-step">
+          <span class="step-num" aria-hidden="true">02</span>
+          <div class="step-body">
+            <h3 class="step-title">Architecture</h3>
+            <p class="step-desc">We design a system that fits your scale — today and as you grow.</p>
+          </div>
+        </li>
+        <li class="process-step">
+          <span class="step-num" aria-hidden="true">03</span>
+          <div class="step-body">
+            <h3 class="step-title">Build & Iterate</h3>
+            <p class="step-desc">Frequent, visible progress. You see working software early.</p>
+          </div>
+        </li>
+        <li class="process-step">
+          <span class="step-num" aria-hidden="true">04</span>
+          <div class="step-body">
+            <h3 class="step-title">Deploy & Maintain</h3>
+            <p class="step-desc">We deploy to production and keep things running reliably.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       4. CONTACT CTA BAND
+       ===================================================================== -->
+  <section class="cta-band" aria-labelledby="services-cta-heading">
+    <div class="cta-scanline" aria-hidden="true"></div>
+
+    <div class="cta-inner">
+      <div class="cta-label-row" aria-hidden="true">
+        <span class="cta-ref">REF_SVC</span>
+        <div class="cta-rule"></div>
+        <span class="cta-ref">CONTACT</span>
+      </div>
+
+      <h2 id="services-cta-heading" class="cta-heading">
+        Ready to build<br />something?
+      </h2>
+      <p class="cta-body">
+        Tell us about your project. We'll respond within one business day.
+      </p>
+      <a href="/contact" class="btn btn--inverse">
+        Contact us
+        <svg class="btn-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+          <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style>
+  /* ==========================================================================
+     Shared utilities
+     ========================================================================== */
+
+  /* Eyebrow labels */
+  .section-eyebrow {
+    margin-bottom: 0.75rem;
+  }
+  .eyebrow-mono {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    font-weight: 500;
+    letter-spacing: var(--tracking-wide);
+    color: var(--color-signal);
+    text-transform: uppercase;
+  }
+
+  /* Section headings */
+  .section-heading {
+    font-family: var(--font-display);
+    font-size: var(--text-3xl);
+    font-weight: 700;
+    letter-spacing: var(--tracking-tight);
+    color: var(--color-ink-900);
+    line-height: var(--leading-tight);
+    margin: 0 0 1rem;
+  }
+
+  .section-subhead {
+    font-family: var(--font-sans);
+    font-size: var(--text-lg);
+    color: var(--color-gray-600);
+    line-height: var(--leading-normal);
+    margin: 0;
+  }
+
+  /* Generic section wrapper */
+  .section {
+    padding-block: var(--spacing-section-y);
+  }
+
+  .section-inner {
+    max-width: var(--container-site);
+    margin-inline: auto;
+    padding-inline: var(--spacing-gutter);
+  }
+
+  .section-header {
+    margin-bottom: 3rem;
+  }
+
+  /* Buttons */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--radius-sm);
+    font-family: var(--font-sans);
+    font-size: var(--text-sm);
+    font-weight: 600;
+    text-decoration: none;
+    letter-spacing: 0.01em;
+    transition: background-color 0.15s ease, color 0.15s ease,
+                box-shadow 0.15s ease, transform 0.15s ease;
+    white-space: nowrap;
+    cursor: pointer;
+  }
+  .btn:active { transform: translateY(1px); }
+  .btn:focus-visible {
+    outline: 2px solid var(--color-signal);
+    outline-offset: 3px;
+  }
+
+  .btn--inverse {
+    background-color: var(--color-paper);
+    color: var(--color-ink-900);
+  }
+  .btn--inverse:hover {
+    background-color: var(--color-gray-100);
+    box-shadow: 0 4px 20px rgb(0 0 0 / 0.25);
+  }
+
+  .btn-arrow {
+    flex-shrink: 0;
+    transition: transform 0.2s ease;
+  }
+  .btn:hover .btn-arrow {
+    transform: translateX(3px);
+  }
+
+  /* ==========================================================================
+     1. PAGE HERO
+     ========================================================================== */
+
+  .page-hero {
+    position: relative;
+    background-color: var(--color-ink-900);
+    overflow: hidden;
+    padding-block: 6rem 5rem;
+    isolation: isolate;
+  }
+
+  /* Blueprint grid */
+  .page-hero-grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgb(255 255 255 / 0.035) 1px, transparent 1px),
+      linear-gradient(90deg, rgb(255 255 255 / 0.035) 1px, transparent 1px);
+    background-size: 48px 48px;
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%, transparent 90%);
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%, transparent 90%);
+    pointer-events: none;
+  }
+
+  /* Scan line */
+  .page-hero-scanline {
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 3px,
+      rgb(255 255 255 / 0.012) 3px,
+      rgb(255 255 255 / 0.012) 4px
+    );
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  /* Decorative rule lines */
+  .hero-rule {
+    position: absolute;
+    background-color: rgb(255 255 255 / 0.06);
+    pointer-events: none;
+  }
+  .hero-rule--h {
+    left: 0; right: 0;
+    height: 1px;
+    top: 50%;
+  }
+  .hero-rule--v {
+    top: 0; bottom: 0;
+    width: 1px;
+    left: calc(var(--spacing-gutter) + 2px);
+  }
+
+  .page-hero-inner {
+    position: relative;
+    z-index: 2;
+    max-width: var(--container-site);
+    margin-inline: auto;
+    padding-inline: var(--spacing-gutter);
+  }
+
+  /* Eyebrow */
+  .hero-eyebrow {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    font-weight: 500;
+    letter-spacing: var(--tracking-wide);
+    color: var(--color-gray-500);
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.375rem;
+
+    opacity: 0;
+    transform: translateY(8px);
+    animation: fade-up 0.5s ease 0.05s forwards;
+  }
+
+  .eyebrow-bracket {
+    color: var(--color-signal);
+    font-size: 0.8rem;
+  }
+
+  .eyebrow-text {
+    letter-spacing: 0.1em;
+  }
+
+  /* H1 */
+  .page-hero-heading {
+    font-family: var(--font-display);
+    font-size: var(--text-4xl);
+    font-weight: 700;
+    letter-spacing: var(--tracking-tight);
+    color: var(--color-paper);
+    line-height: var(--leading-tight);
+    margin: 0 0 1.5rem;
+
+    opacity: 0;
+    transform: translateY(16px);
+    animation: fade-up 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.15s forwards;
+  }
+
+  .page-hero-subhead {
+    font-family: var(--font-sans);
+    font-size: var(--text-lg);
+    color: var(--color-gray-400);
+    line-height: var(--leading-normal);
+    max-width: 42rem;
+    margin: 0;
+
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fade-up 0.55s ease 0.3s forwards;
+  }
+
+  @keyframes fade-up {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .hero-eyebrow,
+    .page-hero-heading,
+    .page-hero-subhead {
+      opacity: 1;
+      transform: none;
+      animation: none;
+    }
+  }
+
+  @media (max-width: 48rem) {
+    .page-hero {
+      padding-block: 4.5rem 3.5rem;
+    }
+  }
+
+  /* ==========================================================================
+     2. SERVICES GRID
+     ========================================================================== */
+
+  .services-section {
+    background-color: var(--color-paper-soft);
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+
+  @media (max-width: 40rem) {
+    .services-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  /* ==========================================================================
+     3. PROCESS STRIP
+     ========================================================================== */
+
+  .process-section {
+    background-color: var(--color-paper);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  /* Annotated layout (matches about.astro approach section) */
+  .section-annotated {
+    display: grid;
+    grid-template-columns: 3.5rem 1fr;
+    gap: 2rem;
+    align-items: start;
+    margin-bottom: 3.5rem;
+  }
+
+  .side-annotation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    padding-top: 0.5rem;
+  }
+
+  .annotation-line {
+    display: block;
+    width: 1px;
+    height: 4rem;
+    background: linear-gradient(to bottom, transparent, var(--color-signal));
+  }
+
+  .annotation-line--fade {
+    background: linear-gradient(to bottom, var(--color-signal), transparent);
+    height: 100%;
+    min-height: 3rem;
+  }
+
+  .annotation-label {
+    font-family: var(--font-mono);
+    font-size: 0.55rem;
+    letter-spacing: 0.1em;
+    color: var(--color-signal);
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    transform: rotate(180deg);
+    white-space: nowrap;
+  }
+
+  .process-content {
+    padding-top: 0.25rem;
+  }
+
+  .process-body {
+    font-family: var(--font-sans);
+    font-size: var(--text-lg);
+    color: var(--color-gray-600);
+    line-height: var(--leading-normal);
+    max-width: var(--container-narrow);
+    margin: 0;
+  }
+
+  /* Step track */
+  .process-steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .process-step {
+    padding: 1.75rem 1.5rem;
+    border-right: 1px solid var(--color-border);
+    position: relative;
+    transition: background-color 0.2s ease;
+  }
+
+  .process-step:last-child {
+    border-right: none;
+  }
+
+  .process-step:hover {
+    background-color: var(--color-paper-soft);
+  }
+
+  /* Left accent bar on hover */
+  .process-step::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 100%;
+    background-color: var(--color-signal);
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.25s ease;
+    border-radius: var(--radius-md) 0 0 var(--radius-md);
+  }
+
+  .process-step:hover::before {
+    transform: scaleY(1);
+  }
+
+  .step-num {
+    font-family: var(--font-mono);
+    font-size: 0.6rem;
+    font-weight: 500;
+    letter-spacing: var(--tracking-wide);
+    color: var(--color-signal);
+    display: block;
+    margin-bottom: 1rem;
+    opacity: 0.85;
+  }
+
+  .step-title {
+    font-family: var(--font-display);
+    font-size: var(--text-xl);
+    font-weight: 600;
+    letter-spacing: var(--tracking-tight);
+    color: var(--color-ink-900);
+    line-height: var(--leading-snug);
+    margin: 0 0 0.5rem;
+  }
+
+  .step-desc {
+    font-family: var(--font-sans);
+    font-size: var(--text-sm);
+    color: var(--color-gray-600);
+    line-height: var(--leading-normal);
+    margin: 0;
+  }
+
+  @media (max-width: 64rem) {
+    .process-steps {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .process-step:nth-child(2) {
+      border-right: none;
+    }
+    .process-step:nth-child(1),
+    .process-step:nth-child(2) {
+      border-bottom: 1px solid var(--color-border);
+    }
+  }
+
+  @media (max-width: 40rem) {
+    .section-annotated {
+      grid-template-columns: 1fr;
+    }
+    .side-annotation {
+      display: none;
+    }
+    .process-steps {
+      grid-template-columns: 1fr;
+    }
+    .process-step {
+      border-right: none;
+      border-bottom: 1px solid var(--color-border);
+    }
+    .process-step:last-child {
+      border-bottom: none;
+    }
+    .process-step:nth-child(2) {
+      border-right: none;
+    }
+  }
+
+  /* ==========================================================================
+     4. CONTACT CTA BAND
+     ========================================================================== */
+
+  .cta-band {
+    position: relative;
+    background-color: var(--color-ink-950);
+    padding-block: 6rem;
+    overflow: hidden;
+    isolation: isolate;
+    text-align: center;
+  }
+
+  .cta-scanline {
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 3px,
+      rgb(255 255 255 / 0.008) 3px,
+      rgb(255 255 255 / 0.008) 4px
+    );
+    pointer-events: none;
+  }
+
+  .cta-band::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+      ellipse 60% 70% at 50% 50%,
+      color-mix(in srgb, var(--color-signal) 12%, transparent) 0%,
+      transparent 70%
+    );
+    pointer-events: none;
+  }
+
+  .cta-inner {
+    position: relative;
+    z-index: 1;
+    max-width: 40rem;
+    margin-inline: auto;
+    padding-inline: var(--spacing-gutter);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cta-label-row {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+    width: 100%;
+    max-width: 20rem;
+  }
+
+  .cta-ref {
+    font-family: var(--font-mono);
+    font-size: 0.55rem;
+    letter-spacing: 0.1em;
+    color: var(--color-gray-700);
+    text-transform: uppercase;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .cta-rule {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(
+      to right,
+      var(--color-border-dark),
+      var(--color-signal),
+      var(--color-border-dark)
+    );
+  }
+
+  .cta-heading {
+    font-family: var(--font-display);
+    font-size: var(--text-4xl);
+    font-weight: 700;
+    letter-spacing: var(--tracking-tight);
+    color: var(--color-paper);
+    line-height: var(--leading-tight);
+    margin-bottom: 1.25rem;
+  }
+
+  .cta-body {
+    font-family: var(--font-sans);
+    font-size: var(--text-base);
+    color: var(--color-gray-500);
+    line-height: var(--leading-normal);
+    margin-bottom: 2.5rem;
+  }
+
+  @media (max-width: 48rem) {
+    .cta-band { padding-block: 4.5rem; }
+  }
+</style>
