@@ -269,11 +269,11 @@ const services = [
 
   .btn--primary {
     background-color: var(--color-signal);
-    color: #ffffff;
+    color: var(--color-surface-card);
   }
   .btn--primary:hover {
     background-color: var(--color-signal-hover);
-    box-shadow: 0 4px 16px rgb(37 99 255 / 0.3);
+    box-shadow: 0 4px 16px color-mix(in srgb, var(--color-signal) 30%, transparent);
   }
 
   .btn--ghost {
@@ -491,7 +491,6 @@ const services = [
     margin: 0 0 1.75rem;
     display: flex;
     flex-direction: column;
-    gap: 0;
   }
 
   .hero-heading-line {
@@ -830,7 +829,7 @@ const services = [
     inset: 0;
     background: radial-gradient(
       ellipse 60% 70% at 50% 50%,
-      rgb(37 99 255 / 0.12) 0%,
+      color-mix(in srgb, var(--color-signal) 12%, transparent) 0%,
       transparent 70%
     );
     pointer-events: none;
@@ -845,7 +844,6 @@ const services = [
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0;
   }
 
   /* Reference row */
