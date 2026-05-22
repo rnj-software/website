@@ -48,6 +48,5 @@ Items that must be completed by the site owner before the site goes live:
 - [ ] Create the `website` repository in the `rnj-software` GitHub organization and push the `main` branch.
 - [ ] In the repo: **Settings → Pages → Build and deployment → Source** — select **GitHub Actions**.
 - [ ] Sign up at [web3forms.com](https://web3forms.com) using `support@rnj-software.com`, obtain the access key, and replace `WEB3FORMS_ACCESS_KEY_PLACEHOLDER` in `src/pages/contact.astro` with the real key.
-- [ ] Set the effective date on the Privacy Policy (`src/pages/privacy.astro`) and Terms of Service (`src/pages/terms.astro`) pages — replace `[to be set at launch]` with the actual launch date.
 - [ ] At the Squarespace DNS settings for `rnj-software.com`: add four `A` records for the apex domain pointing to the GitHub Pages IPs `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`; and add a `CNAME` record for the `www` subdomain pointing to `rnj-software.github.io`. Then in the repo **Settings → Pages**, set the custom domain to `rnj-software.com` and enable **Enforce HTTPS**.
 - [ ] Review the Privacy Policy and Terms of Service content (ideally with legal counsel) before launch.
