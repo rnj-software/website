@@ -36,7 +36,8 @@
      focus rings, key highlights. */
   --color-signal:       #2563ff; /* primary accent                        */
   --color-signal-hover: #1d4fd8; /* darker signal — hover / pressed states */
-  --color-signal-soft:  #e7ecff; /* tinted background wash                 */
+  --color-signal-soft:  #d8e1ff; /* tinted background wash — darkened to  */
+                                  /* reach ≥4.5:1 vs --color-signal (AA)   */
 
   /* --- Color: neutral gray scale ----------------------------------------- */
   --color-gray-50:  #f6f6f5;
@@ -48,7 +49,7 @@
   --color-gray-600: #565651;
   --color-gray-700: #3f3f3b;
   --color-gray-800: #2a2a27;
-  --color-gray-900: #1a1a18;
+  --color-gray-900: #1a1a1a;
 
   /* --- Typography --------------------------------------------------------- */
   --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
@@ -102,8 +103,11 @@
                0 4px 8px rgb(15 15 15 / 0.08);
 
   /* --- Borders ------------------------------------------------------------ */
-  --color-border:      #e4e4e1; /* hairline on light surfaces */
-  --color-border-dark: #2e2e2e; /* hairline on dark surfaces  */
+  --color-border:       #e4e4e1; /* hairline on light surfaces */
+  --color-border-dark:  #2e2e2e; /* hairline on dark surfaces  */
+
+  /* --- Color: surfaces ---------------------------------------------------- */
+  --color-surface-card: #ffffff; /* pure-white card surface                */
 }
 
 /* --------------------------------------------------------------------------
@@ -114,7 +118,7 @@
   --bg-base:        var(--color-paper);
   --bg-alt:         var(--color-paper-soft);
   --bg-inverse:     var(--color-ink-900);
-  --surface-card:   #ffffff;
+  --surface-card:   var(--color-surface-card);
   --text-primary:   var(--color-ink-900);
   --text-secondary: var(--color-gray-600);
   --text-on-dark:   var(--color-paper);
