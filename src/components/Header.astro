@@ -19,7 +19,7 @@ function isActive(href: string): boolean {
   <div class="header-inner">
     <!-- Logo -->
     <a href="/" class="logo-link" aria-label="RnJ Software — Home">
-      <img src="/logo.png" alt="RnJ Software" class="logo-img" width="28" height="28" />
+      <img src="/logo.png" alt="RnJ Software" class="logo-img" width="44" height="44" />
     </a>
 
     <!-- Desktop Nav -->
@@ -208,7 +208,7 @@ function isActive(href: string): boolean {
   }
 
   .logo-img {
-    height: 28px;
+    height: 44px;
     width: auto;
     /* Invert the B&W logo so it renders white on dark header */
     filter: invert(1);
@@ -387,5 +387,6 @@ function isActive(href: string): boolean {
   @media (max-width: 48rem) {
     .desktop-nav { display: none; }
     .menu-toggle { display: flex; }
+    .logo-img { height: 38px; }
   }
 </style>
