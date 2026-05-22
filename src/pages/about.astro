@@ -1,0 +1,824 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="About"
+  description="RnJ Software LLC is a software engineering and consulting firm based in Coral Springs, Florida. Founded in 2025, we partner with businesses to design, build, and maintain custom software."
+>
+
+  <!-- =====================================================================
+       1. PAGE HERO
+       ===================================================================== -->
+  <section class="page-hero" aria-labelledby="about-hero-heading">
+    <!-- Blueprint grid -->
+    <div class="page-hero-grid" aria-hidden="true"></div>
+    <!-- Scan line -->
+    <div class="page-hero-scanline" aria-hidden="true"></div>
+
+    <div class="page-hero-inner">
+      <!-- Eyebrow -->
+      <p class="hero-eyebrow" aria-hidden="true">
+        <span class="eyebrow-bracket">[</span>
+        <span class="eyebrow-text">RNJ-SW // ABT-001</span>
+        <span class="eyebrow-bracket">]</span>
+      </p>
+
+      <h1 id="about-hero-heading" class="page-hero-heading">
+        About RnJ Software
+      </h1>
+
+      <p class="page-hero-subhead">
+        RnJ Software LLC is a software engineering and consulting firm based in Coral Springs, Florida.
+        Founded in 2025, we partner with businesses to design, build, and maintain custom software&nbsp;—
+        web and mobile applications, cloud infrastructure, and AI-powered systems.
+      </p>
+    </div>
+
+    <!-- Decorative rule lines -->
+    <div class="hero-rule hero-rule--h" aria-hidden="true"></div>
+    <div class="hero-rule hero-rule--v" aria-hidden="true"></div>
+  </section>
+
+  <!-- =====================================================================
+       2. APPROACH
+       ===================================================================== -->
+  <section class="section approach-section" aria-labelledby="approach-heading">
+    <div class="section-inner approach-inner">
+      <!-- Left annotation -->
+      <div class="side-annotation" aria-hidden="true">
+        <span class="annotation-line"></span>
+        <span class="annotation-label">// APPROACH</span>
+        <span class="annotation-line annotation-line--fade"></span>
+      </div>
+
+      <!-- Content -->
+      <div class="approach-content">
+        <p class="section-eyebrow">
+          <span class="eyebrow-mono">// HOW WE WORK</span>
+        </p>
+        <h2 id="approach-heading" class="section-heading">
+          Our approach
+        </h2>
+        <p class="approach-body">
+          Our approach is straightforward: understand the problem, build the right thing, and ship it.
+          We bring engineering discipline to every project, whether we're developing software for a
+          client or building our own products.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       3. VALUES
+       ===================================================================== -->
+  <section class="section values-section" aria-labelledby="values-heading">
+    <div class="section-inner">
+      <header class="section-header">
+        <p class="section-eyebrow">
+          <span class="eyebrow-mono">// VALUES</span>
+        </p>
+        <h2 id="values-heading" class="section-heading">What we stand for</h2>
+      </header>
+
+      <div class="values-grid" role="list">
+
+        <!-- Value 1 -->
+        <article class="value-card" role="listitem">
+          <div class="value-card-index" aria-hidden="true">01</div>
+          <div class="value-card-corner value-card-corner--tl" aria-hidden="true"></div>
+          <div class="value-card-corner value-card-corner--br" aria-hidden="true"></div>
+          <h3 class="value-card-title">Engineering rigor</h3>
+          <p class="value-card-body">We build software to last.</p>
+        </article>
+
+        <!-- Value 2 -->
+        <article class="value-card" role="listitem">
+          <div class="value-card-index" aria-hidden="true">02</div>
+          <div class="value-card-corner value-card-corner--tl" aria-hidden="true"></div>
+          <div class="value-card-corner value-card-corner--br" aria-hidden="true"></div>
+          <h3 class="value-card-title">End-to-end ownership</h3>
+          <p class="value-card-body">From architecture to deployment.</p>
+        </article>
+
+        <!-- Value 3 -->
+        <article class="value-card" role="listitem">
+          <div class="value-card-index" aria-hidden="true">03</div>
+          <div class="value-card-corner value-card-corner--tl" aria-hidden="true"></div>
+          <div class="value-card-corner value-card-corner--br" aria-hidden="true"></div>
+          <h3 class="value-card-title">Practical delivery</h3>
+          <p class="value-card-body">Working software, shipped.</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       4. COMPANY FACTS
+       ===================================================================== -->
+  <section class="section facts-section" aria-labelledby="facts-heading">
+    <div class="section-inner">
+      <div class="facts-card">
+        <!-- Blueprint watermark -->
+        <span class="facts-bg-label" aria-hidden="true">RNJ</span>
+
+        <!-- Blueprint corner marks -->
+        <div class="facts-corner facts-corner--tl" aria-hidden="true"></div>
+        <div class="facts-corner facts-corner--br" aria-hidden="true"></div>
+
+        <div class="facts-content">
+          <p class="section-eyebrow">
+            <span class="eyebrow-mono facts-eyebrow-mono">// COMPANY INFO</span>
+          </p>
+          <h2 id="facts-heading" class="section-heading facts-heading">
+            The details
+          </h2>
+
+          <dl class="facts-list">
+            <div class="fact-row">
+              <dt class="fact-label">Legal name</dt>
+              <dd class="fact-value">RnJ Software LLC</dd>
+            </div>
+            <div class="fact-row">
+              <dt class="fact-label">Entity type</dt>
+              <dd class="fact-value">Florida limited liability company</dd>
+            </div>
+            <div class="fact-row">
+              <dt class="fact-label">Founded</dt>
+              <dd class="fact-value">2025</dd>
+            </div>
+            <div class="fact-row">
+              <dt class="fact-label">Headquarters</dt>
+              <dd class="fact-value">Coral Springs, Florida</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       5. CONTACT CTA BAND
+       ===================================================================== -->
+  <section class="cta-band" aria-labelledby="about-cta-heading">
+    <div class="cta-scanline" aria-hidden="true"></div>
+
+    <div class="cta-inner">
+      <div class="cta-label-row" aria-hidden="true">
+        <span class="cta-ref">REF_ABT</span>
+        <div class="cta-rule"></div>
+        <span class="cta-ref">CONTACT</span>
+      </div>
+
+      <h2 id="about-cta-heading" class="cta-heading">
+        Ready to build<br />something?
+      </h2>
+      <p class="cta-body">
+        Let's talk about your project. We'll respond within one business day.
+      </p>
+      <a href="/contact" class="btn btn--inverse">
+        Contact us
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+          <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style>
+  /* ==========================================================================
+     Shared utilities
+     ========================================================================== */
+
+  /* Eyebrow labels */
+  .section-eyebrow {
+    margin-bottom: 0.75rem;
+  }
+  .eyebrow-mono {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    font-weight: 500;
+    letter-spacing: var(--tracking-wide);
+    color: var(--color-signal);
+    text-transform: uppercase;
+  }
+
+  /* Section headings */
+  .section-heading {
+    font-family: var(--font-display);
+    font-size: var(--text-3xl);
+    font-weight: 700;
+    letter-spacing: var(--tracking-tight);
+    color: var(--color-ink-900);
+    line-height: var(--leading-tight);
+    margin: 0 0 1rem;
+  }
+
+  /* Generic section wrapper */
+  .section {
+    padding-block: var(--spacing-section-y);
+  }
+
+  .section-inner {
+    max-width: var(--container-site);
+    margin-inline: auto;
+    padding-inline: var(--spacing-gutter);
+  }
+
+  .section-header {
+    margin-bottom: 3rem;
+  }
+
+  /* Buttons */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--radius-sm);
+    font-family: var(--font-sans);
+    font-size: var(--text-sm);
+    font-weight: 600;
+    text-decoration: none;
+    letter-spacing: 0.01em;
+    transition: background-color 0.15s ease, color 0.15s ease,
+                box-shadow 0.15s ease, transform 0.15s ease;
+    white-space: nowrap;
+    cursor: pointer;
+  }
+  .btn:active { transform: translateY(1px); }
+  .btn:focus-visible {
+    outline: 2px solid var(--color-signal);
+    outline-offset: 3px;
+  }
+
+  .btn--inverse {
+    background-color: var(--color-paper);
+    color: var(--color-ink-900);
+  }
+  .btn--inverse:hover {
+    background-color: var(--color-gray-100);
+    box-shadow: 0 4px 20px rgb(0 0 0 / 0.25);
+  }
+
+  /* ==========================================================================
+     1. PAGE HERO
+     ========================================================================== */
+
+  .page-hero {
+    position: relative;
+    background-color: var(--color-ink-900);
+    overflow: hidden;
+    padding-block: 6rem 5rem;
+    isolation: isolate;
+  }
+
+  /* Blueprint grid */
+  .page-hero-grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgb(255 255 255 / 0.035) 1px, transparent 1px),
+      linear-gradient(90deg, rgb(255 255 255 / 0.035) 1px, transparent 1px);
+    background-size: 48px 48px;
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%, transparent 90%);
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%, transparent 90%);
+    pointer-events: none;
+  }
+
+  /* Scan line */
+  .page-hero-scanline {
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 3px,
+      rgb(255 255 255 / 0.012) 3px,
+      rgb(255 255 255 / 0.012) 4px
+    );
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  /* Decorative rule lines */
+  .hero-rule {
+    position: absolute;
+    background-color: rgb(255 255 255 / 0.06);
+    pointer-events: none;
+  }
+  .hero-rule--h {
+    left: 0; right: 0;
+    height: 1px;
+    top: 50%;
+  }
+  .hero-rule--v {
+    top: 0; bottom: 0;
+    width: 1px;
+    left: calc(var(--spacing-gutter) + 2px);
+  }
+
+  .page-hero-inner {
+    position: relative;
+    z-index: 2;
+    max-width: var(--container-site);
+    margin-inline: auto;
+    padding-inline: var(--spacing-gutter);
+  }
+
+  /* Eyebrow */
+  .hero-eyebrow {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    font-weight: 500;
+    letter-spacing: var(--tracking-wide);
+    color: var(--color-gray-500);
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.375rem;
+
+    opacity: 0;
+    transform: translateY(8px);
+    animation: fade-up 0.5s ease 0.05s forwards;
+  }
+
+  .eyebrow-bracket {
+    color: var(--color-signal);
+    font-size: 0.8rem;
+  }
+
+  .eyebrow-text {
+    letter-spacing: 0.1em;
+  }
+
+  /* H1 */
+  .page-hero-heading {
+    font-family: var(--font-display);
+    font-size: var(--text-4xl);
+    font-weight: 700;
+    letter-spacing: var(--tracking-tight);
+    color: var(--color-paper);
+    line-height: var(--leading-tight);
+    margin: 0 0 1.5rem;
+
+    opacity: 0;
+    transform: translateY(16px);
+    animation: fade-up 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.15s forwards;
+  }
+
+  .page-hero-subhead {
+    font-family: var(--font-sans);
+    font-size: var(--text-lg);
+    color: var(--color-gray-400);
+    line-height: var(--leading-normal);
+    max-width: 42rem;
+    margin: 0;
+
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fade-up 0.55s ease 0.3s forwards;
+  }
+
+  @keyframes fade-up {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .hero-eyebrow,
+    .page-hero-heading,
+    .page-hero-subhead {
+      opacity: 1;
+      transform: none;
+      animation: none;
+    }
+  }
+
+  @media (max-width: 48rem) {
+    .page-hero {
+      padding-block: 4.5rem 3.5rem;
+    }
+  }
+
+  /* ==========================================================================
+     2. APPROACH
+     ========================================================================== */
+
+  .approach-section {
+    background-color: var(--color-paper);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .approach-inner {
+    display: grid;
+    grid-template-columns: 3.5rem 1fr;
+    gap: 2rem;
+    align-items: start;
+  }
+
+  /* Left annotation column */
+  .side-annotation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    padding-top: 0.5rem;
+  }
+
+  .annotation-line {
+    display: block;
+    width: 1px;
+    height: 4rem;
+    background: linear-gradient(to bottom, transparent, var(--color-signal));
+  }
+
+  .annotation-line--fade {
+    background: linear-gradient(to bottom, var(--color-signal), transparent);
+    height: 100%;
+    min-height: 3rem;
+  }
+
+  .annotation-label {
+    font-family: var(--font-mono);
+    font-size: 0.55rem;
+    letter-spacing: 0.1em;
+    color: var(--color-signal);
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    transform: rotate(180deg);
+    white-space: nowrap;
+  }
+
+  .approach-content {
+    padding-top: 0.25rem;
+  }
+
+  .approach-body {
+    font-family: var(--font-sans);
+    font-size: var(--text-lg);
+    color: var(--color-gray-600);
+    line-height: var(--leading-normal);
+    max-width: var(--container-narrow);
+    margin: 0;
+  }
+
+  @media (max-width: 40rem) {
+    .approach-inner {
+      grid-template-columns: 1fr;
+    }
+    .side-annotation {
+      display: none;
+    }
+  }
+
+  /* ==========================================================================
+     3. VALUES
+     ========================================================================== */
+
+  .values-section {
+    background-color: var(--color-paper-soft);
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .values-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+  }
+
+  .value-card {
+    position: relative;
+    background-color: var(--color-surface-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: 2rem 1.75rem 2rem;
+    overflow: hidden;
+    transition: box-shadow 0.2s ease, border-color 0.2s ease;
+  }
+
+  .value-card:hover {
+    box-shadow: var(--shadow-md);
+    border-color: color-mix(in srgb, var(--color-signal) 30%, var(--color-border));
+  }
+
+  /* Blueprint corner marks */
+  .value-card-corner {
+    position: absolute;
+    width: 1rem;
+    height: 1rem;
+    pointer-events: none;
+  }
+
+  .value-card-corner--tl {
+    top: 0.75rem;
+    left: 0.75rem;
+    border-top: 1.5px solid var(--color-signal);
+    border-left: 1.5px solid var(--color-signal);
+    border-radius: var(--radius-xs) 0 0 0;
+    opacity: 0.35;
+  }
+
+  .value-card-corner--br {
+    bottom: 0.75rem;
+    right: 0.75rem;
+    border-bottom: 1.5px solid var(--color-signal);
+    border-right: 1.5px solid var(--color-signal);
+    border-radius: 0 0 var(--radius-xs) 0;
+    opacity: 0.35;
+  }
+
+  .value-card:hover .value-card-corner--tl,
+  .value-card:hover .value-card-corner--br {
+    opacity: 0.7;
+  }
+
+  /* Index number */
+  .value-card-index {
+    font-family: var(--font-mono);
+    font-size: 0.6rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    color: var(--color-signal);
+    margin-bottom: 1.25rem;
+    display: block;
+  }
+
+  .value-card-title {
+    font-family: var(--font-display);
+    font-size: var(--text-xl);
+    font-weight: 600;
+    letter-spacing: var(--tracking-tight);
+    color: var(--color-ink-900);
+    line-height: var(--leading-snug);
+    margin: 0 0 0.625rem;
+  }
+
+  .value-card-body {
+    font-family: var(--font-sans);
+    font-size: var(--text-base);
+    color: var(--color-gray-600);
+    line-height: var(--leading-normal);
+    margin: 0;
+  }
+
+  @media (max-width: 64rem) {
+    .values-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 40rem) {
+    .values-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  /* ==========================================================================
+     4. COMPANY FACTS
+     ========================================================================== */
+
+  .facts-section {
+    background-color: var(--color-paper);
+  }
+
+  .facts-card {
+    position: relative;
+    background-color: var(--color-ink-900);
+    border-radius: var(--radius-lg);
+    padding: 3.5rem 3rem;
+    overflow: hidden;
+    isolation: isolate;
+  }
+
+  /* Large background watermark */
+  .facts-bg-label {
+    position: absolute;
+    right: -0.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: var(--font-display);
+    font-size: clamp(6rem, 14vw, 11rem);
+    font-weight: 700;
+    letter-spacing: -0.04em;
+    color: rgb(255 255 255 / 0.03);
+    pointer-events: none;
+    user-select: none;
+    line-height: 1;
+    white-space: nowrap;
+  }
+
+  /* Blueprint corner marks */
+  .facts-corner {
+    position: absolute;
+    width: 1.5rem;
+    height: 1.5rem;
+    pointer-events: none;
+  }
+
+  .facts-corner--tl {
+    top: 1rem;
+    left: 1rem;
+    border-top: 1.5px solid var(--color-signal);
+    border-left: 1.5px solid var(--color-signal);
+    border-radius: var(--radius-xs) 0 0 0;
+    opacity: 0.5;
+  }
+
+  .facts-corner--br {
+    bottom: 1rem;
+    right: 1rem;
+    border-bottom: 1.5px solid var(--color-signal);
+    border-right: 1.5px solid var(--color-signal);
+    border-radius: 0 0 var(--radius-xs) 0;
+    opacity: 0.5;
+  }
+
+  .facts-content {
+    position: relative;
+    z-index: 1;
+  }
+
+  .facts-eyebrow-mono {
+    color: var(--color-signal-soft);
+    opacity: 0.7;
+  }
+
+  .facts-heading {
+    color: var(--color-paper);
+  }
+
+  /* Facts definition list */
+  .facts-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
+    border: 1px solid var(--color-border-dark);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    margin-top: 2rem;
+    max-width: 44rem;
+  }
+
+  .fact-row {
+    padding: 1.125rem 1.5rem;
+    border-bottom: 1px solid var(--color-border-dark);
+    border-right: 1px solid var(--color-border-dark);
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .fact-row:nth-child(even) {
+    border-right: none;
+  }
+
+  .fact-row:nth-last-child(-n+2) {
+    border-bottom: none;
+  }
+
+  .fact-label {
+    font-family: var(--font-mono);
+    font-size: 0.6rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    color: var(--color-gray-500);
+    text-transform: uppercase;
+  }
+
+  .fact-value {
+    font-family: var(--font-sans);
+    font-size: var(--text-base);
+    font-weight: 500;
+    color: var(--color-paper);
+    line-height: var(--leading-snug);
+  }
+
+  @media (max-width: 48rem) {
+    .facts-card {
+      padding: 2.5rem 1.75rem;
+    }
+    .facts-bg-label {
+      display: none;
+    }
+    .facts-list {
+      grid-template-columns: 1fr;
+    }
+    .fact-row {
+      border-right: none;
+    }
+    .fact-row:nth-last-child(-n+2) {
+      border-bottom: 1px solid var(--color-border-dark);
+    }
+    .fact-row:last-child {
+      border-bottom: none;
+    }
+  }
+
+  /* ==========================================================================
+     5. CONTACT CTA BAND
+     ========================================================================== */
+
+  .cta-band {
+    position: relative;
+    background-color: var(--color-ink-950);
+    padding-block: 6rem;
+    overflow: hidden;
+    isolation: isolate;
+    text-align: center;
+  }
+
+  .cta-scanline {
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 3px,
+      rgb(255 255 255 / 0.008) 3px,
+      rgb(255 255 255 / 0.008) 4px
+    );
+    pointer-events: none;
+  }
+
+  .cta-band::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+      ellipse 60% 70% at 50% 50%,
+      color-mix(in srgb, var(--color-signal) 12%, transparent) 0%,
+      transparent 70%
+    );
+    pointer-events: none;
+  }
+
+  .cta-inner {
+    position: relative;
+    z-index: 1;
+    max-width: 40rem;
+    margin-inline: auto;
+    padding-inline: var(--spacing-gutter);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cta-label-row {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+    width: 100%;
+    max-width: 20rem;
+  }
+
+  .cta-ref {
+    font-family: var(--font-mono);
+    font-size: 0.55rem;
+    letter-spacing: 0.1em;
+    color: var(--color-gray-700);
+    text-transform: uppercase;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .cta-rule {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(
+      to right,
+      var(--color-border-dark),
+      var(--color-signal),
+      var(--color-border-dark)
+    );
+  }
+
+  .cta-heading {
+    font-family: var(--font-display);
+    font-size: var(--text-4xl);
+    font-weight: 700;
+    letter-spacing: var(--tracking-tight);
+    color: var(--color-paper);
+    line-height: var(--leading-tight);
+    margin-bottom: 1.25rem;
+  }
+
+  .cta-body {
+    font-family: var(--font-sans);
+    font-size: var(--text-base);
+    color: var(--color-gray-500);
+    line-height: var(--leading-normal);
+    margin-bottom: 2.5rem;
+  }
+
+  @media (max-width: 48rem) {
+    .cta-band { padding-block: 4.5rem; }
+  }
+</style>
