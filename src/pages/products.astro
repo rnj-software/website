@@ -4,7 +4,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 <BaseLayout
   title="Products"
-  description="RnJ Software LLC builds and operates its own software products. Meet Vanihla — the AI app that turns cooking videos into complete, structured recipes."
+  description="RnJ Software LLC builds and operates its own software products. Meet Vanihla — a smart, AI-powered recipe platform that turns links and images into organized recipe cards."
 >
 
   <!-- =====================================================================
@@ -49,7 +49,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <span class="eyebrow-mono">// FEATURED PRODUCT</span>
         </p>
         <h2 id="vanihla-heading" class="section-heading">Vanihla</h2>
-        <p class="section-tagline">AI that turns cooking videos into recipes.</p>
+        <p class="section-tagline">A smart recipe platform for modern cooks.</p>
       </header>
 
       <!-- Two-column showcase -->
@@ -135,15 +135,16 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <div class="vanihla-content">
           <!-- Description -->
           <p class="vanihla-description">
-            Vanihla extracts complete, structured recipes from cooking videos using AI&nbsp;—
-            so what you watch becomes something you can actually cook.
+            Vanihla is a smart recipe platform that turns links or images from TikTok,
+            Instagram, YouTube, blogs, and more into organized, searchable recipe cards.
+            Designed for modern cooks, it uses AI to extract ingredients and steps,
+            offering a minimalist, easy-to-use interface for effortless recipe management.
           </p>
 
-          <!-- Ownership — verbatim, prominent -->
-          <div class="ownership-block">
-            <div class="ownership-accent" aria-hidden="true"></div>
-            <p class="ownership-text">Vanihla is a product of RnJ Software LLC.</p>
-          </div>
+          <!-- Ownership statement — keeps the RnJ ↔ Vanihla link explicit for verification -->
+          <p class="vanihla-ownership">
+            Vanihla is designed, built, and operated by RnJ Software LLC.
+          </p>
 
           <!-- Feature highlights -->
           <ul class="feature-list" role="list">
@@ -153,7 +154,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
                   <path d="M3 8l3.5 3.5L13 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </span>
-              <span>Automatically identifies ingredients and quantities</span>
+              <span>Imports recipes from TikTok, Instagram, YouTube, blogs, and more</span>
             </li>
             <li class="feature-item" role="listitem">
               <span class="feature-icon" aria-hidden="true">
@@ -161,7 +162,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
                   <path d="M3 8l3.5 3.5L13 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </span>
-              <span>Outputs step-by-step instructions you can follow</span>
+              <span>AI extracts the ingredients and step-by-step instructions</span>
             </li>
             <li class="feature-item" role="listitem">
               <span class="feature-icon" aria-hidden="true">
@@ -169,7 +170,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
                   <path d="M3 8l3.5 3.5L13 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </span>
-              <span>Works with videos from any cooking channel or source</span>
+              <span>Organized into clean, searchable recipe cards</span>
             </li>
           </ul>
 
@@ -885,29 +886,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     max-width: var(--container-narrow);
   }
 
-  /* Ownership block — prominent */
-  .ownership-block {
-    display: flex;
-    align-items: stretch;
-    gap: 1rem;
-    padding: 1.25rem 1.5rem;
-    background-color: color-mix(in srgb, var(--color-signal) 5%, var(--color-surface-card));
-    border: 1px solid color-mix(in srgb, var(--color-signal) 15%, var(--color-border));
-    border-radius: var(--radius-md);
-  }
-
-  .ownership-accent {
-    width: 3px;
-    border-radius: 2px;
-    background-color: var(--color-signal);
-    flex-shrink: 0;
-    align-self: stretch;
-  }
-
-  .ownership-text {
+  /* Ownership statement — natural prose, kept explicit for verification */
+  .vanihla-ownership {
     font-family: var(--font-sans);
     font-size: var(--text-base);
-    font-weight: 600;
+    font-weight: 500;
     color: var(--color-ink-900);
     line-height: var(--leading-normal);
     margin: 0;
