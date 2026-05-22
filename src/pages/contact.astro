@@ -67,7 +67,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           action="https://api.web3forms.com/submit"
           method="POST"
           class="contact-form"
-          novalidate
         >
           <!-- Hidden: access key -->
           <!-- Replace with the real Web3Forms access key before launch -->
@@ -75,6 +74,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
           <!-- Hidden: subject -->
           <input type="hidden" name="subject" value="New message from rnj-software.com" />
+
+          <!-- Hidden: redirect for no-JS users -->
+          <input type="hidden" name="redirect" value="https://rnj-software.com" />
 
           <!-- Honeypot: visually hidden, off-screen, hidden from AT and tab order -->
           <input
@@ -146,7 +148,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
           <!-- Submit -->
           <button type="submit" id="submit-btn" class="btn btn--primary submit-btn">
-            Send message
+            <span class="btn-label">Send message</span>
             <svg class="btn-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
               <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
@@ -497,6 +499,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
   /* The form itself */
   .contact-form {
+    position: relative;
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
@@ -736,14 +739,21 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   const form = document.getElementById('contact-form') as HTMLFormElement | null;
   const statusEl = document.getElementById('form-status') as HTMLDivElement | null;
   const submitBtn = document.getElementById('submit-btn') as HTMLButtonElement | null;
+  const btnLabel = submitBtn?.querySelector('.btn-label') as HTMLSpanElement | null;
 
-  if (form && statusEl && submitBtn) {
+  if (form && statusEl && submitBtn && btnLabel) {
+    // Shared helper: restore button to its default ready state
+    function restoreButton(): void {
+      submitBtn!.disabled = false;
+      btnLabel!.textContent = 'Send message';
+    }
+
     form.addEventListener('submit', async (e: Event) => {
       e.preventDefault();
 
       // Disable button and show loading state
       submitBtn.disabled = true;
-      submitBtn.textContent = 'Sending…';
+      btnLabel.textContent = 'Sending…';
 
       // Clear previous status
       statusEl.textContent = '';
@@ -772,10 +782,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           statusEl.textContent = "Message sent! We'll get back to you within one business day.";
           statusEl.className = 'form-status status--success';
           form.reset();
-
-          // Restore button
-          submitBtn.disabled = false;
-          submitBtn.innerHTML = `Send message <svg class="btn-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+          restoreButton();
         } else {
           throw new Error(result.message || 'Submission failed');
         }
@@ -783,10 +790,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         // Error state
         statusEl.textContent = 'Something went wrong. Please try again or email us directly at support@rnj-software.com.';
         statusEl.className = 'form-status status--error';
-
-        // Restore button
-        submitBtn.disabled = false;
-        submitBtn.innerHTML = `Send message <svg class="btn-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+        restoreButton();
       }
     });
   }
