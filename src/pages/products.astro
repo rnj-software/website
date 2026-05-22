@@ -189,7 +189,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
             <!-- App Store affordance — inactive until live -->
             <!-- Replace with the App Store URL once Vanihla is live -->
-            <div class="appstore-placeholder" aria-label="Coming to the App Store" role="img">
+            <div class="appstore-placeholder" aria-label="Coming to the App Store" role="img" tabindex="-1" aria-disabled="true">
               <svg class="appstore-icon" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                 <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
               </svg>
@@ -219,7 +219,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <p class="section-eyebrow" aria-hidden="true">
           <span class="eyebrow-mono">// WHAT'S NEXT</span>
         </p>
-        <p class="closing-text" id="closing-heading">More products are in development.</p>
+        <h2 class="closing-text" id="closing-heading">More products are in development.</h2>
         <p class="closing-sub">
           We build software that solves problems we care about — and we ship it.
           Follow our progress or <a href="/contact" class="inline-link">get in touch</a> to learn more.
@@ -367,8 +367,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       linear-gradient(rgb(255 255 255 / 0.035) 1px, transparent 1px),
       linear-gradient(90deg, rgb(255 255 255 / 0.035) 1px, transparent 1px);
     background-size: 48px 48px;
-    -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%, transparent 90%);
-    mask-image: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%, transparent 90%);
+    -webkit-mask-image: linear-gradient(to bottom, rgb(0 0 0 / 0.6) 0%, transparent 90%);
+    mask-image: linear-gradient(to bottom, rgb(0 0 0 / 0.6) 0%, transparent 90%);
     pointer-events: none;
   }
 
@@ -679,7 +679,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     font-family: var(--font-display);
     font-size: 0.65rem;
     font-weight: 700;
-    color: #fff;
+    color: var(--color-surface-card);
     flex-shrink: 0;
   }
 
@@ -1077,7 +1077,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     padding-top: 0.25rem;
   }
 
-  .closing-text {
+  h2.closing-text {
     font-family: var(--font-display);
     font-size: var(--text-2xl);
     font-weight: 600;
