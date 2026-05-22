@@ -1,0 +1,316 @@
+---
+const currentYear = new Date().getFullYear();
+const startYear = 2025;
+const copyrightRange = currentYear > startYear
+  ? `${startYear}–${currentYear}`
+  : `${startYear}`;
+
+const navLinks = [
+  { href: '/', label: 'Home' },
+  { href: '/about', label: 'About' },
+  { href: '/services', label: 'Services' },
+  { href: '/products', label: 'Products' },
+  { href: '/contact', label: 'Contact' },
+];
+
+const legalLinks = [
+  { href: '/privacy', label: 'Privacy Policy' },
+  { href: '/terms', label: 'Terms of Service' },
+];
+---
+
+<footer class="site-footer">
+  <!-- Top border decoration -->
+  <div class="footer-topbar" aria-hidden="true">
+    <span class="footer-refmark">REF_001</span>
+    <div class="footer-topline"></div>
+    <span class="footer-refmark">RNJ-SW</span>
+  </div>
+
+  <div class="footer-inner">
+    <!-- Column 1: Brand & Address -->
+    <div class="footer-brand">
+      <a href="/" class="footer-logo-link" aria-label="RnJ Software — Home">
+        <img src="/logo.png" alt="RnJ Software" class="footer-logo" width="120" height="34" />
+      </a>
+      <p class="footer-tagline">Engineering software solutions<br />with precision and purpose.</p>
+
+      <address class="footer-address">
+        <span class="address-label" aria-hidden="true">// MAILING_ADDR</span>
+        <span>RnJ Software LLC</span>
+        <span>5944 Coral Ridge Dr #1091</span>
+        <span>Coral Springs, FL 33076</span>
+      </address>
+    </div>
+
+    <!-- Column 2: Navigation -->
+    <div class="footer-nav-block">
+      <h3 class="footer-col-heading">
+        <span aria-hidden="true">{'// '}</span>Navigation
+      </h3>
+      <nav aria-label="Footer navigation">
+        <ul role="list" class="footer-nav-list">
+          {navLinks.map(({ href, label }) => (
+            <li>
+              <a href={href} class="footer-link">{label}</a>
+            </li>
+          ))}
+        </ul>
+      </nav>
+    </div>
+
+    <!-- Column 3: Legal + Contact -->
+    <div class="footer-contact-block">
+      <h3 class="footer-col-heading">
+        <span aria-hidden="true">{'// '}</span>Legal
+      </h3>
+      <nav aria-label="Legal pages navigation">
+        <ul role="list" class="footer-nav-list">
+          {legalLinks.map(({ href, label }) => (
+            <li>
+              <a href={href} class="footer-link">{label}</a>
+            </li>
+          ))}
+        </ul>
+      </nav>
+
+      <h3 class="footer-col-heading footer-col-heading--spaced">
+        <span aria-hidden="true">{'// '}</span>Contact
+      </h3>
+      <ul role="list" class="footer-contact-list">
+        <li>
+          <a href="mailto:support@rnj-software.com" class="footer-link footer-email">
+            support@rnj-software.com
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Bottom copyright bar -->
+  <div class="footer-bottom">
+    <div class="footer-bottom-inner">
+      <span class="footer-copyright">
+        &copy; {copyrightRange} RnJ Software LLC. All rights reserved.
+      </span>
+      <span class="footer-build-ref" aria-hidden="true">
+        BUILD.{currentYear}.rnj-sw
+      </span>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    background-color: var(--color-ink-950);
+    color: var(--color-gray-400);
+    /* subtle dot-grid texture */
+    background-image: radial-gradient(
+      circle,
+      rgb(255 255 255 / 0.03) 1px,
+      transparent 1px
+    );
+    background-size: 24px 24px;
+  }
+
+  /* Top decoration bar */
+  .footer-topbar {
+    max-width: var(--container-site);
+    margin-inline: auto;
+    padding-inline: var(--spacing-gutter);
+    padding-top: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .footer-refmark {
+    font-family: var(--font-mono);
+    font-size: 0.6rem;
+    letter-spacing: var(--tracking-wide);
+    color: var(--color-gray-700);
+    text-transform: uppercase;
+    flex-shrink: 0;
+  }
+
+  .footer-topline {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(
+      to right,
+      var(--color-border-dark),
+      var(--color-signal) 30%,
+      var(--color-border-dark)
+    );
+  }
+
+  /* Main footer grid */
+  .footer-inner {
+    max-width: var(--container-site);
+    margin-inline: auto;
+    padding: 2.5rem var(--spacing-gutter) 3rem;
+    display: grid;
+    grid-template-columns: 1.6fr 1fr 1.2fr;
+    gap: 3rem;
+  }
+
+  /* Brand column */
+  .footer-logo-link {
+    display: inline-flex;
+    border-radius: var(--radius-xs);
+    transition: opacity 0.15s ease;
+    margin-bottom: 1rem;
+  }
+  .footer-logo-link:hover { opacity: 0.8; }
+  .footer-logo-link:focus-visible {
+    outline: 2px solid var(--color-signal);
+    outline-offset: 3px;
+  }
+
+  .footer-logo {
+    height: 24px;
+    width: auto;
+    /* Invert to show white on dark */
+    filter: invert(1) brightness(0.75);
+    display: block;
+  }
+
+  .footer-tagline {
+    font-family: var(--font-sans);
+    font-size: var(--text-sm);
+    line-height: var(--leading-normal);
+    color: var(--color-gray-500);
+    margin-bottom: 1.5rem;
+  }
+
+  .footer-address {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    font-style: normal;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    line-height: 1.7;
+    color: var(--color-gray-600);
+  }
+
+  .address-label {
+    color: var(--color-gray-700);
+    letter-spacing: 0.02em;
+    margin-bottom: 0.25rem;
+    font-size: 0.65rem;
+  }
+
+  /* Nav / Legal columns */
+  .footer-col-heading {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    font-weight: 500;
+    letter-spacing: var(--tracking-wide);
+    text-transform: uppercase;
+    color: var(--color-gray-600);
+    margin-bottom: 0.875rem;
+    /* Override the h-tag global default */
+    font-family: var(--font-mono);
+    line-height: 1;
+    letter-spacing: 0.04em;
+  }
+
+  .footer-col-heading--spaced {
+    margin-top: 2rem;
+  }
+
+  .footer-nav-list,
+  .footer-contact-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.375rem;
+  }
+
+  .footer-link {
+    font-family: var(--font-sans);
+    font-size: var(--text-sm);
+    color: var(--color-gray-400);
+    text-decoration: none;
+    transition: color 0.15s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+  }
+
+  .footer-link:hover {
+    color: var(--color-paper);
+  }
+
+  .footer-link:focus-visible {
+    outline: 2px solid var(--color-signal);
+    outline-offset: 2px;
+    border-radius: var(--radius-xs);
+  }
+
+  .footer-email {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--color-signal);
+    word-break: break-all;
+  }
+  .footer-email:hover {
+    color: var(--color-signal-hover);
+    text-decoration: underline;
+  }
+
+  /* Bottom bar */
+  .footer-bottom {
+    border-top: 1px solid var(--color-border-dark);
+  }
+
+  .footer-bottom-inner {
+    max-width: var(--container-site);
+    margin-inline: auto;
+    padding: 1.25rem var(--spacing-gutter);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .footer-copyright {
+    font-family: var(--font-sans);
+    font-size: var(--text-xs);
+    color: var(--color-gray-600);
+  }
+
+  .footer-build-ref {
+    font-family: var(--font-mono);
+    font-size: 0.6rem;
+    color: var(--color-gray-700);
+    letter-spacing: 0.06em;
+  }
+
+  /* Responsive */
+  @media (max-width: 56rem) {
+    .footer-inner {
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+    .footer-brand {
+      grid-column: 1 / -1;
+    }
+  }
+
+  @media (max-width: 36rem) {
+    .footer-inner {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+    .footer-bottom-inner {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+    .footer-build-ref { display: none; }
+  }
+</style>
