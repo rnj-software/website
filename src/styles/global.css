@@ -1,1 +1,161 @@
 @import "tailwindcss";
+
+/* ==========================================================================
+   RnJ Software LLC — Site Design System
+   Single source of truth for color, type, spacing, radius and elevation.
+   Aesthetic: modern, technical, engineering-grade. Charcoal base, off-white
+   surfaces, one sharp accent. Built to complement a strictly B&W logo.
+
+   FONTS — Task 3 must add these <link> tags to the base layout <head>:
+     <link rel="preconnect" href="https://fonts.googleapis.com" />
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+     <link
+       href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap"
+       rel="stylesheet" />
+
+     - Headings / display : "Space Grotesk"  (geometric, technical, distinctive)
+     - Body / UI          : "IBM Plex Sans"  (clean, neutral, highly legible)
+     - Code / labels      : "IBM Plex Mono"  (echoes the </> logo motif)
+   ========================================================================== */
+
+@theme {
+  /* --- Color: brand base -------------------------------------------------- */
+  /* Charcoal / near-black — primary brand surface, complements the B&W logo */
+  --color-ink-950: #0f0f0f;   /* deepest — footers, overlays            */
+  --color-ink-900: #1a1a1a;   /* primary dark base                      */
+  --color-ink-800: #242424;   /* raised dark surface / dark cards        */
+  --color-ink-700: #2e2e2e;   /* dark borders / hairlines                */
+
+  /* Off-white surfaces — primary light backgrounds */
+  --color-paper:      #fafaf9; /* page background (warm off-white)       */
+  --color-paper-soft: #f2f2f0; /* alternating sections / subtle fills    */
+
+  /* --- Color: accent ------------------------------------------------------ */
+  /* ONE sharp accent — "signal blue". Reads as code, precision, energy.
+     High contrast on both ink and paper. Use sparingly: links, CTAs,
+     focus rings, key highlights. */
+  --color-signal:       #2563ff; /* primary accent                        */
+  --color-signal-hover: #1d4fd8; /* darker signal — hover / pressed states */
+  --color-signal-soft:  #e7ecff; /* tinted background wash                 */
+
+  /* --- Color: neutral gray scale ----------------------------------------- */
+  --color-gray-50:  #f6f6f5;
+  --color-gray-100: #ebebe9;
+  --color-gray-200: #dcdcd9;
+  --color-gray-300: #c2c2bd;
+  --color-gray-400: #9a9a94;
+  --color-gray-500: #74746e;
+  --color-gray-600: #565651;
+  --color-gray-700: #3f3f3b;
+  --color-gray-800: #2a2a27;
+  --color-gray-900: #1a1a18;
+
+  /* --- Typography --------------------------------------------------------- */
+  --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-sans:    "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono:    "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+  /* Type scale — fluid where it matters (display sizes use clamp) */
+  --text-xs:   0.75rem;   /* 12px — eyebrows, captions, mono labels */
+  --text-sm:   0.875rem;  /* 14px — secondary text                  */
+  --text-base: 1rem;      /* 16px — body                            */
+  --text-lg:   1.125rem;  /* 18px — lead paragraphs                 */
+  --text-xl:   1.375rem;  /* 22px — small headings                  */
+  --text-2xl:  1.75rem;   /* 28px — h3                              */
+  --text-3xl:  clamp(2rem, 1.4rem + 2.4vw, 2.75rem);   /* h2        */
+  --text-4xl:  clamp(2.5rem, 1.6rem + 3.6vw, 3.75rem); /* h1        */
+  --text-5xl:  clamp(3rem, 1.6rem + 5.6vw, 5rem);      /* hero      */
+
+  --leading-tight:  1.1;
+  --leading-snug:   1.25;
+  --leading-normal: 1.6;
+
+  --tracking-tight:  -0.02em;  /* display headings                 */
+  --tracking-normal: 0em;
+  --tracking-wide:   0.08em;   /* mono eyebrows / uppercase labels  */
+
+  /* --- Spacing scale ------------------------------------------------------ */
+  /* 4px base unit. Tailwind's default numeric scale stays available;
+     these named tokens cover section / layout rhythm. */
+  --spacing-section:   6rem;   /* 96px — vertical gap between sections   */
+  --spacing-section-y: 5rem;   /* 80px — internal section padding        */
+  --spacing-gutter:    1.5rem; /* 24px — horizontal page gutter          */
+
+  /* --- Layout ------------------------------------------------------------- */
+  --container-site:   75rem;   /* 1200px — primary content max-width    */
+  --container-narrow: 44rem;   /* 704px  — prose / text-heavy blocks    */
+  --container-wide:   87.5rem; /* 1400px — full-bleed feature sections  */
+
+  /* --- Border radius ------------------------------------------------------ */
+  /* Restrained, technical — small radii, never pill-soft. */
+  --radius-xs: 0.25rem;  /* 4px  — tags, inputs           */
+  --radius-sm: 0.5rem;   /* 8px  — buttons                */
+  --radius-md: 0.75rem;  /* 12px — cards                  */
+  --radius-lg: 1rem;     /* 16px — large panels           */
+
+  /* --- Elevation ---------------------------------------------------------- */
+  --shadow-sm: 0 1px 2px rgb(15 15 15 / 0.06),
+               0 1px 3px rgb(15 15 15 / 0.08);
+  --shadow-md: 0 4px 12px rgb(15 15 15 / 0.08),
+               0 2px 4px rgb(15 15 15 / 0.06);
+  --shadow-lg: 0 12px 32px rgb(15 15 15 / 0.12),
+               0 4px 8px rgb(15 15 15 / 0.08);
+
+  /* --- Borders ------------------------------------------------------------ */
+  --color-border:      #e4e4e1; /* hairline on light surfaces */
+  --color-border-dark: #2e2e2e; /* hairline on dark surfaces  */
+}
+
+/* --------------------------------------------------------------------------
+   Semantic role aliases — page/component code should reference these so
+   intent stays decoupled from raw palette values.
+   -------------------------------------------------------------------------- */
+:root {
+  --bg-base:        var(--color-paper);
+  --bg-alt:         var(--color-paper-soft);
+  --bg-inverse:     var(--color-ink-900);
+  --surface-card:   #ffffff;
+  --text-primary:   var(--color-ink-900);
+  --text-secondary: var(--color-gray-600);
+  --text-on-dark:   var(--color-paper);
+  --text-accent:    var(--color-signal);
+}
+
+/* --------------------------------------------------------------------------
+   Base element defaults — minimal, just enough to make the tokens take hold.
+   -------------------------------------------------------------------------- */
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-base);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  line-height: var(--leading-normal);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-tight);
+}
+
+::selection {
+  background-color: var(--color-signal);
+  color: #ffffff;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-signal);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
