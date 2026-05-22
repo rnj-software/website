@@ -1,0 +1,528 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Terms of Service"
+  description="Terms of Service for RnJ Software LLC. Read the terms that govern your use of rnj-software.com."
+>
+
+  <!-- =====================================================================
+       1. PAGE HERO
+       ===================================================================== -->
+  <section class="page-hero" aria-labelledby="terms-hero-heading">
+    <!-- Blueprint grid background -->
+    <div class="page-hero-grid" aria-hidden="true"></div>
+    <!-- Scan line overlay -->
+    <div class="page-hero-scanline" aria-hidden="true"></div>
+
+    <div class="page-hero-inner">
+      <!-- Eyebrow -->
+      <p class="hero-eyebrow" aria-hidden="true">
+        <span class="eyebrow-bracket">[</span>
+        <span class="eyebrow-text">RNJ-SW // LGL-002</span>
+        <span class="eyebrow-bracket">]</span>
+      </p>
+
+      <h1 id="terms-hero-heading" class="page-hero-heading">
+        Terms of Service
+      </h1>
+
+      <p class="page-hero-subhead">
+        The terms that govern your use of rnj-software.com and your relationship with RnJ Software LLC.
+      </p>
+    </div>
+
+    <!-- Decorative rule lines -->
+    <div class="hero-rule hero-rule--h" aria-hidden="true"></div>
+    <div class="hero-rule hero-rule--v" aria-hidden="true"></div>
+  </section>
+
+  <!-- =====================================================================
+       2. TERMS OF SERVICE CONTENT
+       ===================================================================== -->
+  <section class="section policy-section" aria-label="Terms of service content">
+    <div class="section-inner policy-inner">
+
+      <!-- Sidebar annotation -->
+      <aside class="policy-sidebar" aria-hidden="true">
+        <div class="sidebar-rule"></div>
+        <span class="sidebar-label">// LEGAL</span>
+        <div class="sidebar-rule sidebar-rule--fade"></div>
+      </aside>
+
+      <!-- Main prose column -->
+      <article class="policy-content">
+
+        <!-- Effective date -->
+        <div class="effective-date">
+          <span class="effective-date-label">Effective date:</span>
+          <!-- Set the effective date when the site goes live -->
+          <span class="effective-date-value">[to be set at launch]</span>
+        </div>
+
+        <!-- Intro paragraph -->
+        <p class="policy-intro">
+          These Terms of Service ("Terms") govern your use of the website rnj-software.com (the "Site"),
+          operated by RnJ Software LLC ("RnJ Software," "we," "us," or "our"). By accessing or using the
+          Site, you agree to these Terms.
+        </p>
+
+        <!-- Section divider -->
+        <div class="section-divider" aria-hidden="true"></div>
+
+        <!-- 1. Use of the Site -->
+        <div class="policy-block">
+          <h2 class="policy-heading">Use of the Site.</h2>
+          <p class="policy-body">
+            You may use the Site for lawful, personal, and informational purposes. You agree not to use
+            the Site in any way that could damage, disable, or impair it, or interfere with any other
+            party's use of the Site.
+          </p>
+        </div>
+
+        <!-- 2. Intellectual Property -->
+        <div class="policy-block">
+          <h2 class="policy-heading">Intellectual Property.</h2>
+          <p class="policy-body">
+            All content on this Site — including text, graphics, logos, and the RnJ Software name and
+            marks — is the property of RnJ Software LLC or its licensors and is protected by applicable
+            intellectual property laws. You may not reproduce or redistribute Site content without our
+            prior written permission.
+          </p>
+        </div>
+
+        <!-- 3. No Warranty -->
+        <div class="policy-block">
+          <h2 class="policy-heading">No Warranty.</h2>
+          <p class="policy-body">
+            The Site is provided "as is" and "as available" without warranties of any kind, express or
+            implied. We do not warrant that the Site will be uninterrupted, error-free, or free of
+            harmful components.
+          </p>
+        </div>
+
+        <!-- 4. Limitation of Liability -->
+        <div class="policy-block">
+          <h2 class="policy-heading">Limitation of Liability.</h2>
+          <p class="policy-body">
+            To the fullest extent permitted by law, RnJ Software LLC will not be liable for any indirect,
+            incidental, or consequential damages arising from your use of, or inability to use, the Site.
+          </p>
+        </div>
+
+        <!-- 5. External Links -->
+        <div class="policy-block">
+          <h2 class="policy-heading">External Links.</h2>
+          <p class="policy-body">
+            The Site may contain links to third-party websites. We are not responsible for the content or
+            practices of those websites.
+          </p>
+        </div>
+
+        <!-- 6. Governing Law -->
+        <div class="policy-block">
+          <h2 class="policy-heading">Governing Law.</h2>
+          <p class="policy-body">
+            These Terms are governed by the laws of the State of Florida, without regard to its
+            conflict-of-law principles.
+          </p>
+        </div>
+
+        <!-- 7. Changes to These Terms -->
+        <div class="policy-block">
+          <h2 class="policy-heading">Changes to These Terms.</h2>
+          <p class="policy-body">
+            We may update these Terms from time to time. Continued use of the Site after changes are
+            posted constitutes acceptance of the revised Terms.
+          </p>
+        </div>
+
+        <!-- 8. Contact Us -->
+        <div class="policy-block policy-block--last">
+          <h2 class="policy-heading">Contact Us.</h2>
+          <p class="policy-body">
+            Questions about these Terms? Contact us at
+            <a href="mailto:support@rnj-software.com" class="policy-link">support@rnj-software.com</a>
+            or RnJ Software LLC, 5944 Coral Ridge Dr #1091, Coral Springs, FL 33076.
+          </p>
+        </div>
+
+        <!-- Bottom reference annotation -->
+        <div class="policy-ref-row" aria-hidden="true">
+          <span class="policy-ref">LGL-002</span>
+          <div class="policy-ref-line"></div>
+          <span class="policy-ref">RNJ-SW</span>
+        </div>
+
+      </article>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style>
+  /* ==========================================================================
+     1. PAGE HERO — mirrors privacy.astro exactly
+     ========================================================================== */
+
+  .page-hero {
+    position: relative;
+    background-color: var(--color-ink-900);
+    overflow: hidden;
+    padding-block: 6rem 5rem;
+    isolation: isolate;
+  }
+
+  /* Blueprint grid */
+  .page-hero-grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgb(255 255 255 / 0.035) 1px, transparent 1px),
+      linear-gradient(90deg, rgb(255 255 255 / 0.035) 1px, transparent 1px);
+    background-size: 48px 48px;
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%, transparent 90%);
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%, transparent 90%);
+    pointer-events: none;
+  }
+
+  /* Scan line */
+  .page-hero-scanline {
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 3px,
+      rgb(255 255 255 / 0.012) 3px,
+      rgb(255 255 255 / 0.012) 4px
+    );
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  /* Decorative rule lines */
+  .hero-rule {
+    position: absolute;
+    background-color: rgb(255 255 255 / 0.06);
+    pointer-events: none;
+  }
+  .hero-rule--h {
+    left: 0; right: 0;
+    height: 1px;
+    top: 50%;
+  }
+  .hero-rule--v {
+    top: 0; bottom: 0;
+    width: 1px;
+    left: calc(var(--spacing-gutter) + 2px);
+  }
+
+  .page-hero-inner {
+    position: relative;
+    z-index: 2;
+    max-width: var(--container-site);
+    margin-inline: auto;
+    padding-inline: var(--spacing-gutter);
+  }
+
+  /* Eyebrow */
+  .hero-eyebrow {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    font-weight: 500;
+    letter-spacing: var(--tracking-wide);
+    color: var(--color-gray-500);
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.375rem;
+
+    opacity: 0;
+    transform: translateY(8px);
+    animation: fade-up 0.5s ease 0.05s forwards;
+  }
+
+  .eyebrow-bracket {
+    color: var(--color-signal);
+    font-size: 0.8rem;
+  }
+
+  .eyebrow-text {
+    letter-spacing: 0.1em;
+  }
+
+  /* H1 */
+  .page-hero-heading {
+    font-family: var(--font-display);
+    font-size: var(--text-4xl);
+    font-weight: 700;
+    letter-spacing: var(--tracking-tight);
+    color: var(--color-paper);
+    line-height: var(--leading-tight);
+    margin: 0 0 1.5rem;
+
+    opacity: 0;
+    transform: translateY(16px);
+    animation: fade-up 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.15s forwards;
+  }
+
+  .page-hero-subhead {
+    font-family: var(--font-sans);
+    font-size: var(--text-lg);
+    color: var(--color-gray-400);
+    line-height: var(--leading-normal);
+    max-width: 42rem;
+    margin: 0;
+
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fade-up 0.55s ease 0.3s forwards;
+  }
+
+  @keyframes fade-up {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .hero-eyebrow,
+    .page-hero-heading,
+    .page-hero-subhead {
+      opacity: 1;
+      transform: none;
+      animation: none;
+    }
+  }
+
+  @media (max-width: 48rem) {
+    .page-hero {
+      padding-block: 4.5rem 3.5rem;
+    }
+  }
+
+  /* ==========================================================================
+     2. POLICY SECTION
+     ========================================================================== */
+
+  .section {
+    padding-block: var(--spacing-section-y);
+  }
+
+  .section-inner {
+    max-width: var(--container-site);
+    margin-inline: auto;
+    padding-inline: var(--spacing-gutter);
+  }
+
+  .policy-section {
+    background-color: var(--color-paper);
+    border-top: 1px solid var(--color-border);
+  }
+
+  /* Two-column: narrow sidebar annotation + prose column */
+  .policy-inner {
+    display: grid;
+    grid-template-columns: 3.5rem 1fr;
+    gap: 2rem;
+    align-items: start;
+  }
+
+  /* --------------------------------------------------------------------------
+     Sidebar — vertical annotation line + label (decorative, aria-hidden)
+     -------------------------------------------------------------------------- */
+
+  .policy-sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    padding-top: 6.5rem; /* align vertically with intro text */
+    position: sticky;
+    top: 2rem;
+  }
+
+  .sidebar-rule {
+    display: block;
+    width: 1px;
+    height: 4rem;
+    background: linear-gradient(to bottom, transparent, var(--color-signal));
+  }
+
+  .sidebar-rule--fade {
+    background: linear-gradient(to bottom, var(--color-signal), transparent);
+    height: 8rem;
+  }
+
+  .sidebar-label {
+    font-family: var(--font-mono);
+    font-size: 0.55rem;
+    letter-spacing: 0.1em;
+    color: var(--color-signal);
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    transform: rotate(180deg);
+    white-space: nowrap;
+    opacity: 0.6;
+  }
+
+  /* --------------------------------------------------------------------------
+     Prose column
+     -------------------------------------------------------------------------- */
+
+  .policy-content {
+    /* Comfortable reading measure: ~66ch */
+    max-width: var(--container-narrow);
+  }
+
+  /* Effective date banner */
+  .effective-date {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0.5rem;
+    background-color: var(--color-paper-soft);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-xs);
+    padding: 0.5rem 0.875rem;
+    margin-bottom: 2rem;
+  }
+
+  .effective-date-label {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    font-weight: 500;
+    letter-spacing: var(--tracking-wide);
+    color: var(--color-signal);
+    text-transform: uppercase;
+  }
+
+  .effective-date-value {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--color-gray-500);
+    letter-spacing: 0.02em;
+  }
+
+  /* Intro paragraph (before first h2) */
+  .policy-intro {
+    font-family: var(--font-sans);
+    font-size: var(--text-base);
+    color: var(--color-gray-700);
+    line-height: var(--leading-normal);
+    margin: 0 0 0;
+  }
+
+  /* Thin rule divider between intro and sections */
+  .section-divider {
+    height: 1px;
+    background: linear-gradient(
+      to right,
+      var(--color-border),
+      var(--color-border) 80%,
+      transparent
+    );
+    margin-block: 2.5rem;
+  }
+
+  /* Each policy block */
+  .policy-block {
+    margin-bottom: 0;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--color-border);
+    margin-top: 2rem;
+  }
+
+  /* Last block: no bottom border */
+  .policy-block--last {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  /* Section headings — h2 with signal-blue left accent */
+  .policy-heading {
+    font-family: var(--font-display);
+    font-size: var(--text-xl);
+    font-weight: 600;
+    letter-spacing: var(--tracking-tight);
+    color: var(--color-ink-900);
+    line-height: var(--leading-snug);
+    margin: 0 0 0.875rem;
+    padding-left: 0.875rem;
+    border-left: 2px solid var(--color-signal);
+  }
+
+  /* Body paragraphs */
+  .policy-body {
+    font-family: var(--font-sans);
+    font-size: var(--text-base);
+    color: var(--color-gray-700);
+    line-height: var(--leading-normal);
+    margin: 0;
+  }
+
+  /* Inline mailto link */
+  .policy-link {
+    color: var(--color-signal);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+    transition: color 0.15s ease;
+    word-break: break-all;
+  }
+
+  .policy-link:hover {
+    color: var(--color-signal-hover);
+  }
+
+  .policy-link:focus-visible {
+    outline: 2px solid var(--color-signal);
+    outline-offset: 2px;
+    border-radius: var(--radius-xs);
+  }
+
+  /* Bottom reference annotation */
+  .policy-ref-row {
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--color-border);
+  }
+
+  .policy-ref {
+    font-family: var(--font-mono);
+    font-size: 0.5rem;
+    letter-spacing: 0.1em;
+    color: var(--color-gray-300);
+    text-transform: uppercase;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .policy-ref-line {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(
+      to right,
+      var(--color-border),
+      transparent
+    );
+  }
+
+  /* --------------------------------------------------------------------------
+     Responsive
+     -------------------------------------------------------------------------- */
+
+  @media (max-width: 40rem) {
+    .policy-inner {
+      grid-template-columns: 1fr;
+    }
+    .policy-sidebar {
+      display: none;
+    }
+  }
+</style>
