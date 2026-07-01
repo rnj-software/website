@@ -1,52 +1,45 @@
 # RnJ Software LLC Website
 
-The [rnj-software.com](https://rnj-software.com) marketing website for RnJ Software LLC.
+Marketing website for RnJ Software LLC, live at
+**[rnj-software.com](https://rnj-software.com)**.
 
-## Tech Stack
+## Full documentation
 
-- **[Astro](https://astro.build/)** — static site generator
-- **[Tailwind CSS v4](https://tailwindcss.com/)** — utility-first CSS framework
-- Output: fully static site (no server required), hosted on **GitHub Pages**
+**→ [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)** — how the site is built,
+hosted, secured, and how the contact form actually reaches a human
+(Web3Forms → ImprovMX → Gmail). Start there for anything non-obvious.
 
-## Site Structure
+## Tech stack (short version)
 
-| Route | Page |
-| :---- | :--- |
-| `/` | Home |
-| `/about` | About |
-| `/services` | Services |
-| `/products` | Products |
-| `/contact` | Contact |
-| `/privacy` | Privacy Policy |
-| `/terms` | Terms of Service |
-| `/404` | 404 Not Found |
+- **[Astro](https://astro.build/)** static site generator (v6, Node ≥ 22.12)
+- **[Tailwind CSS v4](https://tailwindcss.com/)** via `@tailwindcss/vite`
+- **GitHub Pages** hosting + **GitHub Actions** deploy
+- **Web3Forms** for the contact form; **ImprovMX** for email forwarding
 
-## Local Development
+## Routes
+
+| Route      | Page              |
+| :--------- | :---------------- |
+| `/`        | Home              |
+| `/about`   | About             |
+| `/services`| Services          |
+| `/products`| Products          |
+| `/contact` | Contact           |
+| `/privacy` | Privacy Policy    |
+| `/terms`   | Terms of Service  |
+
+## Local development
 
 ```bash
-# Install dependencies
 npm install
-
-# Start the development server (http://localhost:4321)
-npm run dev
-
-# Build for production (output to dist/)
-npm run build
-
-# Preview the production build locally
-npm run preview
+npm run dev       # http://localhost:4321
+npm run build     # → dist/
+npm run preview   # serve the built site locally
 ```
 
-## Deployment
+## Deploy
 
-Pushes to the `main` branch automatically trigger the GitHub Actions workflow defined in [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml), which builds the site with Astro and deploys the static output to GitHub Pages.
-
-## Launch Checklist
-
-Items that must be completed by the site owner before the site goes live:
-
-- [ ] Create the `website` repository in the `rnj-software` GitHub organization and push the `main` branch.
-- [ ] In the repo: **Settings → Pages → Build and deployment → Source** — select **GitHub Actions**.
-- [ ] Sign up at [web3forms.com](https://web3forms.com) using `support@rnj-software.com`, obtain the access key, and replace `WEB3FORMS_ACCESS_KEY_PLACEHOLDER` in `src/pages/contact.astro` with the real key.
-- [ ] At the Squarespace DNS settings for `rnj-software.com`: add four `A` records for the apex domain pointing to the GitHub Pages IPs `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`; and add a `CNAME` record for the `www` subdomain pointing to `rnj-software.github.io`. Then in the repo **Settings → Pages**, set the custom domain to `rnj-software.com` and enable **Enforce HTTPS**.
-- [ ] Review the Privacy Policy and Terms of Service content (ideally with legal counsel) before launch.
+Push to `main`. GitHub Actions (`.github/workflows/deploy.yml`) builds with
+Astro and publishes to GitHub Pages. See
+[ARCHITECTURE §6](docs/ARCHITECTURE.md#6-build--deploy) for details and rollback
+procedure.
